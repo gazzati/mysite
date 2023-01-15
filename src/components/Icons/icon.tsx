@@ -1,5 +1,5 @@
 import React from 'react'
-import {Telegram, GitHub, Instagram, LinkedIn} from '@components/Icons'
+import {Telegram, GitHub, Instagram, LinkedIn, Spotify} from '@components/Icons'
 import { Icon } from '@interfaces/icons'
 
 export const Icons = ({ name }) => {
@@ -12,6 +12,8 @@ export const Icons = ({ name }) => {
       return <Instagram />
     case Icon.LinkedIn:
       return <LinkedIn />
+    case Icon.Spotify:
+      return <Spotify />
     default:
       return <></>
   }

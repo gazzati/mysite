@@ -4,6 +4,7 @@ import { Navigate, Route, Routes } from "react-router"
 import Header from "@components/Header"
 import SideSocial from "@root/components/SideSocial"
 import SideEmail from "@root/components/SideEmail"
+import Spotify from "@root/components/Spotify"
 
 import routes from "./routes"
 
@@ -13,6 +14,7 @@ const App = () => {
       <Header />
       <SideSocial />
       <SideEmail />
+      <Spotify />
       <main>
         <Routes>
           {routes.map(({ name, path, Component }, index) => (

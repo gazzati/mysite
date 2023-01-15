@@ -25,7 +25,7 @@ const Header = () => {
 
             <ul className={style.list}>
                 {navItems.map(item => (
-                    <li>
+                    <li key={item.url}>
                         <Link to={item.url}>{item.name}</Link>
                     </li>
                 ))}

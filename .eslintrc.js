@@ -2,7 +2,7 @@ module.exports = {
   extends: ["@gazzati/eslint-config-node"],
   rules: {
     // Specific project rules
-  }
+  },
   parserOptions: {
     sourceType: "module",
     ecmaVersion: 2019,

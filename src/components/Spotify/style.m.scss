@@ -1,0 +1,46 @@
+@import "src/styles/variables.scss";
+
+.spotify {
+  visibility: hidden;
+  height: 0;
+  position: fixed;
+  bottom: 0;
+  z-index: 11;
+  width: 500px;
+  right: calc(50% - 370px);
+  border: none;
+  transition: $transition;
+}
+
+.label {
+ display: none;
+  position: fixed;
+  bottom: 0;
+  z-index: 11;
+  right: calc(50% - 400px);
+  color: $secondary-light;
+  background-color: $secondary-dark;
+  padding: 7px 5px 0 5px;
+  border-radius: 8px 8px 0 0;
+
+  svg {
+    transition: $transition;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+
+    &:hover {
+      transform: translateY(-3px);
+      color: $primary
+    }
+  }
+}
+
+.visible {
+  visibility: visible;
+  height: 80px;
+}
+
+.show {
+  display: block;
+}

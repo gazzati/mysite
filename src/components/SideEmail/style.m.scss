@@ -30,4 +30,10 @@
     display: flex;
     align-items: center;
     color: $secondary-light;
+    transition: $transition;
+
+    &:hover {
+        transform: translateY(-3px);
+        color: $primary
+    }
 }

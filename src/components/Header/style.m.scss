@@ -27,6 +27,7 @@
 }
 
 .logo {
+  color: $primary;
   border: 1px $primary solid;
   padding: 6px
 }
@@ -39,5 +40,13 @@
   li {
     font-size: 13px;
     margin: 0 5px;
+
+    a {
+      transition: $transition;
+
+      &:hover {
+        color: $primary
+      }
+    }
   }
 }

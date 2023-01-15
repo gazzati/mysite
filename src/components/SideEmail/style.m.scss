@@ -1,0 +1,33 @@
+@import "src/styles/variables.scss";
+
+.side {
+    width: 40px;
+    position: fixed;
+    bottom: 0;
+    right: 40px;
+    left: auto;
+    z-index: 10;
+}
+
+.email {
+    &:after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 90px;
+        margin: 0 auto;
+        background-color: $secondary-light;
+    }
+}
+
+.link {
+    writing-mode: vertical-rl;
+    margin: 8px auto;
+    padding: 10px;
+    font-size: 13px;
+    width: 40px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    color: $secondary-light;
+}

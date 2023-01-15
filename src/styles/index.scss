@@ -1,0 +1,52 @@
+@import "./variables.scss";
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    font-size: 20px;
+    line-height: 1.3;
+    background-color: $bg-color;
+    color: $secondary
+}
+
+ /* Scrollbar styles */
+ html {
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(47, 47, 47);
+    border-radius: 8px;
+  }
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+main {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
+  min-height: 100vh;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+  height: 100vh;
+  padding: 0;
+  max-width: 910px;
+  margin: 0 auto;
+}

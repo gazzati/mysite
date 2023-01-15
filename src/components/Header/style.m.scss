@@ -1,0 +1,43 @@
+@import "src/styles/variables.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  padding: 0px 50px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100px;
+  background-color: transparent;
+  transition: $transition
+}
+
+.headerScroll {
+  height: 0;
+  visibility: hidden;
+  box-shadow: 0 10px 30px -10px #000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  border: 1px $primary solid;
+  padding: 6px
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+
+  li {
+    font-size: 13px;
+    margin: 0 5px;
+  }
+}

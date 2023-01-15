@@ -1,0 +1,23 @@
+@import "src/styles/variables.scss";
+
+.miniHeading {
+  font-size: 16px;
+  color: $primary;
+}
+
+.bigHeading {
+  font-weight: 600;
+  font-size: 80px;
+}
+
+.lightestHeading {
+  color: $secondary-lightest;
+}
+
+.description {
+  max-width: 516px;
+}
+
+.image {
+  width: 100%;
+}

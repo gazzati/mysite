@@ -18,15 +18,15 @@ export default {
       title: {
         [Locale.En]: "I'm a software engineer.",
         [Locale.Ru]: "Я инженер-разработчик.",
-        [Locale.Os]: "Æз дæн инженер-разработчик.",
+        [Locale.Os]: "Инженер-разработчик.",
       },
       description: {
         [Locale.En]:
-          "Specialized in web application development. Currently, I'm focused on backend and VoIP development",
+          "Specialized in web application development. \nCurrently, I'm focused on backend and VoIP development",
         [Locale.Ru]:
-          "Cпециализируюсь на web разработке. Сейчас я сосредоточен на backend и VoIP разработке",
+          "Cпециализируюсь на web разработке. \nСейчас я сосредоточен на backend и VoIP разработке",
         [Locale.Os]:
-          "Кусын web разработчикæй. Ныр æз аразын backend ӕмӕ VoIP программатӕ",
+          "Кусын web разработчикæй. \nНыр æз аразын backend ӕмӕ VoIP программатӕ",
       },
     },
   },

@@ -12,10 +12,10 @@ const Home = () => {
     return <>
         <section>
             <div className={style.miniHeading}>{l.home.start.welcome[locale]}</div>
-            <div className={classNames(style.bigHeading, style.lightestHeading, {[style.ossetianHeading]: locale === Locale.Os})}>
+            <div className={classNames(style.bigHeading, style.lightestHeading)}>
                 {l.home.start.name[locale]}
             </div>
-            <div className={classNames(style.bigHeading, {[style.ossetianHeading]: locale === Locale.Os})}>
+            <div className={style.bigHeading}>
                 {l.home.start.title[locale]}
             </div>
             <div className={style.description}>{l.home.start.description[locale]}</div>

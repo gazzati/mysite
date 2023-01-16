@@ -4,8 +4,8 @@ import { Navigate, Route, Routes } from "react-router"
 import Header from "@components/Header"
 import SideSocial from "@root/components/SideSocial"
 import SideEmail from "@root/components/SideEmail"
-import Spotify from "@root/components/Spotify"
-import { Locale, LocaleContext } from "@root/locales"
+//import Spotify from "@root/components/Spotify"
+import { Locale, LocaleContext } from "@root/helpers/locales"
 
 import routes from "./routes"
 
@@ -23,7 +23,7 @@ const App = () => {
         <Header setLocale={setLocale} />
         <SideSocial />
         <SideEmail />
-        <Spotify />
+        {/* <Spotify /> */}
         <main>
 
           <Routes>

@@ -7,6 +7,9 @@
     left: 40px;
     right: auto;
     z-index: 10;
+    @media screen and (max-width: $mobile) {
+        display: none;
+    }
 }
 
 .list {

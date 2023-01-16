@@ -3,7 +3,7 @@ import ReactDOM from "react-dom"
 import { BrowserRouter as Router } from "react-router-dom"
 
 import Loader from "@components/Loader"
-import "@styles/index.scss"
+import "@styles"
 
 const App = lazy(() => import("./App"))
 

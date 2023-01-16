@@ -3,8 +3,11 @@ import classNames from "classnames"
 
 import Icons from "@components/Icons"
 import {Icon} from "@interfaces/icons"
+import {Animation, Fade} from '@root/helpers/animations'
 
 import style from "./style.m.scss"
+
+const animation = new Animation(Fade.Up, 15)
 
 const useOutsideClick = (callback) => {
     const ref = useRef() as React.MutableRefObject<HTMLIFrameElement>
@@ -37,7 +40,11 @@ const Spotify = () => {
             ref={ref}
         >
         </iframe>
-        <div className={classNames(style.label, {[style.show]: !open})} onClick={() => setOpen(!open)}>
+        <div
+          className={classNames(style.label, {[style.show]: !open})}
+          onClick={() => setOpen(!open)}
+          style={animation.getDuration()}
+          >
             <Icons name={Icon.Spotify}/>
         </div>
     </>

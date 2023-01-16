@@ -7,6 +7,9 @@
     right: 40px;
     left: auto;
     z-index: 10;
+    @media screen and (max-width: $mobile) {
+        display: none;
+    }
 }
 
 .email {

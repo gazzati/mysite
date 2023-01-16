@@ -2,11 +2,14 @@ import React from "react"
 
 import Icons from "@components/Icons"
 import config from "@root/config"
+import {Animation, Fade} from '@root/helpers/animations'
 
 import style from "./style.m.scss"
 
+const animation = new Animation(Fade.Up, 15)
+
 const SideSocial = () => {
-    return <div className={style.side}>
+    return <div className={style.side} style={animation.getDuration()}>
         <ul className={style.list}>
             {config.socialMedia.map(({ url, name }, index) => (
                 <li key={index}>

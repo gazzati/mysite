@@ -23,7 +23,7 @@
 .logo {
   color: $primary;
   border: 1px $primary solid;
-  padding: 6px
+  padding: 6px;
 }
 
 .nav {
@@ -41,6 +41,7 @@
 
   li {
     margin: 0 5px;
+    transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 
     a {
       transition: $transition;

@@ -1,4 +1,4 @@
-import { Icon } from "@interfaces/icons";
+import { Icon } from "@interfaces/icons"
 
 const config = {
   email: "gazzaevtimur@gmail.com",
@@ -6,21 +6,21 @@ const config = {
   socialMedia: [
     {
       name: Icon.Telegram,
-      url: "https://t.me/gazzati",
+      url: "https://t.me/gazzati"
     },
     {
       name: Icon.GitHub,
-      url: "https://github.com/gazzati",
+      url: "https://github.com/gazzati"
     },
     {
       name: Icon.Instagram,
-      url: "https://www.instagram.com/gazzzati",
+      url: "https://www.instagram.com/gazzzati"
     },
     {
       name: Icon.LinkedIn,
-      url: "https://www.linkedin.com/in/gazzati",
-    },
-  ],
-};
+      url: "https://www.linkedin.com/in/gazzati"
+    }
+  ]
+}
 
-export default config;
+export default config

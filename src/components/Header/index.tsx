@@ -33,7 +33,7 @@ const Header = ({setLocale}) => {
     }
 
     return <header className={classNames(style.header, {[style.headerScroll]: scrolled})}>
-        <Link to="/" className={style.logo} style={animation.getDuration()} >gazzati</Link>
+        <Link to="/" className={style.logo} style={animation.getDuration()}>gazzati</Link>
         <nav className={style.nav}>
             <ul className={style.list}>
                 {navItems.map(item => (

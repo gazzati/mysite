@@ -1,16 +1,24 @@
-import React from "react"
+import React, {useContext} from "react"
 import classNames from "classnames"
+
 import mountains from "@assets/images/mountains.jpg"
+import l, {Locale, LocaleContext} from "@root/locales"
 
 import style from "./style.m.scss"
 
 const Home = () => {
+    const locale = useContext(LocaleContext)
+
     return <>
         <section>
-            <div className={style.miniHeading}>Hi, my name is</div>
-            <div className={classNames(style.bigHeading, style.lightestHeading)}>Gazzaev Timur.</div>
-            <div className={style.bigHeading}>I'm a software engineer.</div>
-            <div className={style.description}>I am a programmer specializing in web application development. Currently, I'm focused on backend and VoIP development</div>
+            <div className={style.miniHeading}>{l.home.start.welcome[locale]}</div>
+            <div className={classNames(style.bigHeading, style.lightestHeading, {[style.ossetianHeading]: locale === Locale.Os})}>
+                {l.home.start.name[locale]}
+            </div>
+            <div className={classNames(style.bigHeading, {[style.ossetianHeading]: locale === Locale.Os})}>
+                {l.home.start.title[locale]}
+            </div>
+            <div className={style.description}>{l.home.start.description[locale]}</div>
         </section>
 
         <section>

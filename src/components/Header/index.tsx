@@ -1,6 +1,8 @@
-import React, {useState, useEffect} from "react"
+import React, {useState, useEffect, useContext} from 'react'
 import {Link} from "react-router-dom"
 import classNames from "classnames"
+
+import {LocaleContext, getLocaleTitle, getNextLocale} from '@root/locales'
 
 import style from "./style.m.scss"
 
@@ -10,7 +12,8 @@ const navItems = [
     {url: "/contacts", name: "Contacts"}
 ]
 
-const Header = () => {
+const Header = ({setLocale}) => {
+    const locale = useContext(LocaleContext)
     const [scrolled, setScrolled] = useState(false)
 
     useEffect(() => {
@@ -19,10 +22,16 @@ const Header = () => {
         }
     }, [])
 
-    return <header className={classNames(style.header, {[style.headerScroll]: scrolled})}>
-        <nav className={style.nav}>
-            <Link to="/" className={style.logo}>gazzati</Link>
+    const setCurrentLocale = () => {
+        const currentLocale = getNextLocale(locale)
 
+        setLocale(currentLocale)
+        localStorage.setItem("locale", currentLocale)
+    }
+
+    return <header className={classNames(style.header, {[style.headerScroll]: scrolled})}>
+        <Link to="/" className={style.logo}>gazzati</Link>
+        <nav className={style.nav}>
             <ul className={style.list}>
                 {navItems.map(item => (
                     <li key={item.url}>
@@ -30,6 +39,12 @@ const Header = () => {
                     </li>
                 ))}
             </ul>
+
+            <div>|&nbsp;</div>
+
+            <div className={style.locale} onClick={setCurrentLocale}>
+                {getLocaleTitle(locale)}
+            </div>
         </nav>
     </header>
 }

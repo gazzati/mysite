@@ -9,8 +9,8 @@ const Home = () => {
         <section>
             <div className={style.miniHeading}>Hi, my name is</div>
             <div className={classNames(style.bigHeading, style.lightestHeading)}>Gazzaev Timur.</div>
-            <div className={style.bigHeading}>I’m a software engineer.</div>
-            <div className={style.description}>I am a programmer specializing in web application development. I am currently focused on backend and VoIP development</div>
+            <div className={style.bigHeading}>I'm a software engineer.</div>
+            <div className={style.description}>I am a programmer specializing in web application development. Currently, I'm focused on backend and VoIP development</div>
         </section>
 
         <section>

@@ -4,28 +4,11 @@ import classNames from "classnames"
 import Icons from "@components/Icons"
 import {Icon} from "@interfaces/icons"
 import {Animation, Fade} from '@root/helpers/animations'
+import {useOutsideClick} from '@root/helpers/dom'
 
 import style from "./style.m.scss"
 
 const animation = new Animation(Fade.Up, 15)
-
-const useOutsideClick = (callback) => {
-    const ref = useRef() as React.MutableRefObject<HTMLIFrameElement>
-
-    useEffect(() => {
-      const handleClick = (event) => {
-        if (ref.current && !ref.current.contains(event.target)) callback()
-      }
-
-      document.addEventListener('click', handleClick, true)
-
-      return () => {
-        document.removeEventListener('click', handleClick, true)
-      }
-    }, [ref])
-
-    return ref
-}
 
 const Spotify = () => {
     const [open, setOpen] = useState(false)

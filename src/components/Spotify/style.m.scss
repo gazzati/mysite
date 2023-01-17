@@ -13,7 +13,8 @@
 }
 
 .label {
- display: none;
+  height: 0;
+  visibility: hidden;
   position: fixed;
   bottom: 0;
   z-index: 11;
@@ -42,5 +43,6 @@
 }
 
 .show {
-  display: block;
+  height: auto;
+  visibility: visible;
 }

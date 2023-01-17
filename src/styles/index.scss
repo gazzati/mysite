@@ -2,16 +2,26 @@
 @import "./variables.scss";
 
 body {
-    padding: 0;
-    margin: 0;
-    font-family: "Rubik", sans-serif;
-    width: 100%;
-    min-height: 100%;
-    overflow-x: hidden;
-    font-size: 20px;
-    line-height: 1.3;
-    background-color: $bg-color;
-    color: $secondary
+  padding: 0;
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  font-size: 20px;
+  line-height: 1.2;
+  background-color: $bg-color;
+  color: $secondary
+}
+
+.blur {
+  overflow: hidden;
+
+  main {
+    filter: blur(5px) brightness(0.7);
+    pointer-events: none;
+    user-select: none;
+  }
 }
 
  /* Scrollbar styles */
@@ -55,13 +65,13 @@ section {
   max-width: 1008px;
   margin: 0 auto;
 
-  @media screen and (max-width: 1160px) {
+  @media (max-width: 1160px) {
     max-width: 800px;
   }
-  @media screen and (max-width: 960px) {
+  @media (max-width: 960px) {
     max-width: 600px;
   }
-  @media screen and (max-width: $mobile) {
+  @media (max-width: $mobile) {
     max-width: 100%
   }
 }

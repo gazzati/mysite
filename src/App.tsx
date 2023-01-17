@@ -10,6 +10,7 @@ import { Locale, LocaleContext } from "@root/helpers/locales"
 import routes from "./routes"
 
 const App = () => {
+  const [menuOpen, setMenuOpen] = useState(false)
   const [locale, setLocale] = useState(Locale.En)
 
   useEffect(() => {
@@ -17,15 +18,20 @@ const App = () => {
     if(Object.values(Locale).includes(storageLocale)) setLocale(storageLocale)
   }, [])
 
+  const toggleMenuOpen = () => {
+    document.body.classList.toggle("blur")
+    setMenuOpen(!menuOpen)
+  }
+
   return (
     <>
       <LocaleContext.Provider value={locale} >
-        <Header setLocale={setLocale} />
+        <Header setLocale={setLocale} menuOpen={menuOpen} toggleMenuOpen={toggleMenuOpen} />
         <SideSocial />
         <SideEmail />
         {/* <Spotify /> */}
-        <main>
 
+        <main>
           <Routes>
             {routes.map(({ name, path, Component }, index) => (
               <Route

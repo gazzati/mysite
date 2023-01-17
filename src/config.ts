@@ -20,6 +20,12 @@ const config = {
       name: Icon.LinkedIn,
       url: "https://www.linkedin.com/in/gazzati"
     }
+  ],
+
+  menuRoutes: [
+    { url: "/about", name: "About" },
+    { url: "/resume", name: "Resume" },
+    { url: "/contacts", name: "Contacts" }
   ]
 }
 

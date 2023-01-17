@@ -10,7 +10,7 @@ body {
   overflow-x: hidden;
   font-size: 20px;
   line-height: 1.2;
-  background-color: $bg-color;
+  background-color: $bg;
   color: $secondary
 }
 
@@ -41,6 +41,11 @@ body {
 a {
   text-decoration: none;
   color: $secondary
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+    user-select: none;
 }
 
 main {

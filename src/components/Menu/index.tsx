@@ -1,10 +1,22 @@
 import React from 'react'
+import {Link} from "react-router-dom"
+import classNames from 'classnames'
+
+import config from "@root/config"
 
 import style from "./style.m.scss"
 
-const Menu = () => {
-    return <aside className={style.menu}>
-        <div>2222</div>
+const Menu = ({open}) => {
+    return <aside className={classNames(style.menu, {[style.open]: open})}>
+        <nav className={style.nav}>
+            <ul className={style.list}>
+            {config.menuRoutes.map(item => (
+                <li key={item.url}>
+                    <Link to={item.url} className={style.link}>{item.name}</Link>
+                </li>
+            ))}
+            </ul>
+        </nav>
     </aside>
 }
 

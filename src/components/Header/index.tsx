@@ -6,14 +6,9 @@ import Menu from "@components/Menu"
 import Burger from "@components/Burger"
 import { LocaleContext, getLocaleTitle, getNextLocale } from "@root/helpers/locales"
 import { Animation, Fade } from "@root/helpers/animations"
+import config from "@root/config"
 
 import style from "./style.m.scss"
-
-const navItems = [
-  { url: "/about", name: "About" },
-  { url: "/resume", name: "Resume" },
-  { url: "/contacts", name: "Contacts" }
-]
 
 const animation = new Animation(Fade.Down, 0)
 
@@ -22,8 +17,14 @@ const Header = ({ setLocale, menuOpen, toggleMenuOpen }) => {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
+    const scrollLimit = window.screen.width > 767 ? 120 : 60
+    let oldValue = 0 // TODO: remove
+
     window.onscroll = () => {
-      setScrolled(window.scrollY > 120)
+      if(oldValue > window.scrollY) return setScrolled(false)
+
+      setScrolled(window.scrollY > scrollLimit)
+      oldValue = window.scrollY
     }
   }, [])
 
@@ -36,13 +37,15 @@ const Header = ({ setLocale, menuOpen, toggleMenuOpen }) => {
 
   return (
     <header className={classNames(style.header, { [style.headerScroll]: scrolled })}>
-      <Link to="/" className={style.logo} style={animation.getDuration()}>
-        gazzati
+      <Link to="/" className={style.logo}
+      style={animation.getDuration()}
+      >
+        <span className={style.logoText}>gazzati</span>
       </Link>
 
       <nav className={style.nav}>
         <ul className={style.list}>
-          {navItems.map(item => (
+          {config.menuRoutes.map(item => (
             <li key={item.url} style={animation.getDuration()}>
               <Link to={item.url}>{item.name}</Link>
             </li>
@@ -58,7 +61,7 @@ const Header = ({ setLocale, menuOpen, toggleMenuOpen }) => {
 
       <Burger open={menuOpen} toggleMenuOpen={toggleMenuOpen} animationStyle={animation.getDuration()} />
 
-      {menuOpen && <Menu />}
+      <Menu open={menuOpen} />
     </header>
   )
 }

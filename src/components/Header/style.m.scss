@@ -15,15 +15,15 @@
   z-index: 5;
   background-color: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(10px);
+  transition: top 0.4s ease-out;
 
   @media (max-width: $mobile) {
     padding: 0 16px;
   }
 }
 
-.headerScroll {
+.hide {
   top: -100px;
-  visibility: hidden;
 }
 
 .logo {

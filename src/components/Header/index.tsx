@@ -11,22 +11,23 @@ import config from "@root/config"
 import style from "./style.m.scss"
 
 const animation = new Animation(Fade.Down, 0)
+const SCROLL_LIMIT = window.screen.width > 767 ? 400 : 200
 
 const Header = ({ setLocale, menuOpen, toggleMenuOpen }) => {
   const locale = useContext(LocaleContext)
-  const [scrolled, setScrolled] = useState(false)
+  const [position, setPosition] = useState(window.pageYOffset)
+  const [visible, setVisible] = useState(true)
 
-  useEffect(() => {
-    const scrollLimit = window.screen.width > 767 ? 120 : 60
-    let oldValue = 0 // TODO: remove
+  useEffect(()=> {
+    window.addEventListener("scroll", () => {
+      const moving = window.pageYOffset
 
-    window.onscroll = () => {
-      if(oldValue > window.scrollY) return setScrolled(false)
+      if(visible && moving < SCROLL_LIMIT) return
 
-      setScrolled(window.scrollY > scrollLimit)
-      oldValue = window.scrollY
-    }
-  }, [])
+      setVisible(position > moving)
+      setPosition(moving)
+   })
+  })
 
   const setCurrentLocale = () => {
     const currentLocale = getNextLocale(locale)
@@ -36,7 +37,7 @@ const Header = ({ setLocale, menuOpen, toggleMenuOpen }) => {
   }
 
   return (
-    <header className={classNames(style.header, { [style.headerScroll]: scrolled })}>
+    <header className={classNames(style.header, { [style.hide]: !visible })}>
       <Link to="/" className={style.logo}
       style={animation.getDuration()}
       >

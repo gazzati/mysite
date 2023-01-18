@@ -14,6 +14,8 @@ const App = () => {
   const [locale, setLocale] = useState(Locale.En)
 
   useEffect(() => {
+    window.history.scrollRestoration = 'manual'
+
     const storageLocale = localStorage.getItem("locale") as Locale
     if(Object.values(Locale).includes(storageLocale)) setLocale(storageLocale)
   }, [])

@@ -11,7 +11,10 @@ body {
   font-size: 20px;
   line-height: 1.2;
   background-color: $bg;
-  color: $secondary
+  color: $secondary;
+  @media (max-width: $mobile) {
+    font-size: 18px;
+  }
 }
 
 .blur {
@@ -43,9 +46,50 @@ a {
   color: $secondary
 }
 
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 *, ::before, ::after {
     box-sizing: inherit;
     user-select: none;
+}
+
+h3 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 0 32px;
+  font-size: 30px;
+  white-space: nowrap;
+  font-weight: 600;
+
+  @media (max-width: $mobile) {
+    font-size: 24px;
+    width: 100%;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: 0;
+    width: 300px;
+    height: 1px;
+    margin-left: 20px;
+    background-color: $primary;
+    @media (max-width: $mobile) {
+      margin-left: 8px;
+      width: 100%;
+    }
+
+  }
 }
 
 main {
@@ -79,5 +123,15 @@ section {
   }
   @media (max-width: $mobile) {
     max-width: 100%
+  }
+
+  &:not(:first-child) {
+    margin-top: 1px;
+    opacity: 0;
+  }
+
+  &.visible {
+    opacity: 1;
+    transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
   }
 }

@@ -25,17 +25,16 @@
 
 .nav {
   width: 100%;
+  margin-left: 32px;
 }
 
 .list {
-  list-style: none;
-
   li {
     margin-top: 16px;
   }
 }
 
-.link {
+.link, .locale {
   color: $secondary-lightest;
   font-size: 16px;
   transition: $transition;
@@ -43,4 +42,11 @@
   &:hover {
     color: $primary
   }
+}
+
+.divider {
+  background-color: $secondary-lightest;
+  height: 1px;
+  width: 70px;
+  margin: 16px 0;
 }

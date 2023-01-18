@@ -12,7 +12,7 @@ const animation = new Animation(Fade.Up, 15)
 
 const Spotify = () => {
     const [open, setOpen] = useState(false)
-    const ref = useOutsideClick(() => setOpen(false))
+    const ref = useOutsideClick<HTMLIFrameElement>(() => setOpen(false))
 
     return <>
         <iframe

@@ -26,6 +26,13 @@ export default {
         [Locale.Ru]: "Cпециализируюсь на web разработке. \nСейчас я сосредоточен на backend и VoIP разработке.",
         [Locale.Os]: "Кусын web разработчикæй. \nНыр æз аразын backend ӕмӕ VoIP программатӕ."
       }
+    },
+    about: {
+      heading: {
+        [Locale.En]: "About Me",
+        [Locale.Ru]: "Обо мне",
+        [Locale.Os]: "Обо мне"
+      }
     }
   }
 }

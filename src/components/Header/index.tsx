@@ -61,7 +61,7 @@ const Header = ({ setLocale, menuOpen, toggleMenuOpen }) => {
 
       <Burger open={menuOpen} toggleMenuOpen={toggleMenuOpen} animationStyle={animation.getDuration()} />
 
-      <Menu open={menuOpen} />
+      <Menu open={menuOpen} setCurrentLocale={setCurrentLocale}/>
     </header>
   )
 }

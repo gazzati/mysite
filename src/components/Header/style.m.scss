@@ -1,4 +1,5 @@
 @import "src/styles/variables.scss";
+@import "src/styles/animations.scss";
 
 .header {
   display: flex;
@@ -12,7 +13,7 @@
   height: 100px;
   transition: $transition;
   z-index: 5;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(10px);
 
   @media (max-width: $mobile) {
@@ -36,6 +37,7 @@
   position: relative;
   transform: translateY(0);
   transition: 1s;
+  background: $bg;
 
   &:hover {
     background-color: $primary;
@@ -69,24 +71,6 @@
   }
 }
 
-@keyframes logo-width {
-  0% {
-    width: 66px;
-  }
-  100% {
-    width: 0;
-  }
-}
-
-@keyframes logo-height {
-  0% {
-    height: 30px;
-  }
-  100% {
-    height: 0;
-  }
-}
-
 .logoText {
   font-size: 20px;
   color: $primary;
@@ -105,9 +89,7 @@
 
 .list {
   display: flex;
-  list-style: none;
-  margin: 0 5px 0 0;
-  padding: 0;
+  margin-right: 5px;
 
   li {
     margin: 0 5px;

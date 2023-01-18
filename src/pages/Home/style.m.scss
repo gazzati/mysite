@@ -22,14 +22,99 @@
 
 .description {
   white-space: pre-wrap;
-  font-size: 20px;
   margin-top: 16px;
+}
 
+.about {
+  display: flex;
   @media (max-width: $mobile) {
-    font-size: 18px;
+    flex-direction: column;
   }
 }
 
-.image {
-  width: 100%;
+.aboutText {
+  width: 60%;
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+}
+
+.portrait {
+  margin-left: 48px;
+  position: relative;
+
+  @media (max-width: $mobile) {
+    margin: 48px auto 0;
+  }
+
+  &:hover,
+  &:focus {
+    outline: 0;
+
+    &:after {
+      top: 15px;
+      left: 15px;
+      @media (max-width: $mobile) {
+        top: 10px;
+        left: 10px;
+      }
+    }
+
+    &:before {
+      opacity: 0;
+    }
+  }
+
+  img {
+    width: 300px;
+    height: auto;
+    position: relative;
+    transition: $transition;
+    border-radius: 4px;
+
+    @media (max-width: $mobile) {
+      width: 224px;
+    }
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    border-radius: 4px;
+    transition: $transition;
+    width: 300px;
+    height: 300px;
+
+    @media (max-width: $mobile) {
+      width: 224px;
+      height: 224px;
+    }
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+    background-color: $primary;
+    opacity: .2;
+    z-index: 1;
+  }
+
+  &:after {
+    border: 2px solid $primary;
+    top: 20px;
+    left: 20px;
+    z-index: -1;
+
+    @media (max-width: $mobile) {
+      top: 14px;
+      left: 14px;
+    }
+  }
+}
+
+
+.test {
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
 }

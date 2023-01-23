@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react"
 import { Link } from "react-router-dom"
+import { HashLink } from "react-router-hash-link"
 import classNames from "classnames"
 
 import Menu from "@components/Menu"
@@ -48,7 +49,7 @@ const Header = ({ setLocale, menuOpen, toggleMenuOpen }) => {
         <ul className={style.list}>
           {config.menuRoutes.map(item => (
             <li key={item.url} style={animation.getDuration()}>
-              <Link to={item.url}>{item.name}</Link>
+              <HashLink to={item.url}>{item.name}</HashLink>
             </li>
           ))}
         </ul>
@@ -62,7 +63,7 @@ const Header = ({ setLocale, menuOpen, toggleMenuOpen }) => {
 
       <Burger open={menuOpen} toggleMenuOpen={toggleMenuOpen} animationStyle={animation.getDuration()} />
 
-      <Menu open={menuOpen} setCurrentLocale={setCurrentLocale}/>
+      <Menu open={menuOpen} toggleMenuOpen={toggleMenuOpen} setCurrentLocale={setCurrentLocale}/>
     </header>
   )
 }

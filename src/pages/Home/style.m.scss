@@ -37,6 +37,38 @@
   @media (max-width: $mobile) {
     width: 100%;
   }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  .fake {
+    text-decoration: line-through;
+  }
+
+  a {
+    color: $primary;
+    opacity: .8;
+    display: inline-block;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 0px;
+      height: 1px;
+      position: relative;
+      bottom: 0.16em;
+      background-color: $primary;
+      transition: $transition;
+      opacity: 0.7;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
 }
 
 .portrait {
@@ -44,7 +76,7 @@
   position: relative;
 
   @media (max-width: $mobile) {
-    margin: 48px auto 0;
+    margin: 32px auto 0;
   }
 
   &:hover,
@@ -60,8 +92,8 @@
       }
     }
 
-    &:before {
-      opacity: 0;
+    img {
+      filter: none;
     }
   }
 
@@ -71,13 +103,13 @@
     position: relative;
     transition: $transition;
     border-radius: 4px;
+    filter: grayscale(100%);
 
     @media (max-width: $mobile) {
       width: 224px;
     }
   }
 
-  &:before,
   &:after {
     content: '';
     position: absolute;
@@ -92,14 +124,6 @@
     }
   }
 
-  &:before {
-    top: 0;
-    left: 0;
-    background-color: $primary;
-    opacity: .2;
-    z-index: 1;
-  }
-
   &:after {
     border: 2px solid $primary;
     top: 20px;
@@ -111,10 +135,4 @@
       left: 14px;
     }
   }
-}
-
-
-.test {
-  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
 }

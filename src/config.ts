@@ -23,7 +23,7 @@ const config = {
   ],
 
   menuRoutes: [
-    { url: "/about", name: "About" },
+    { url: "/#about", name: "About" },
     { url: "/resume", name: "Resume" },
     { url: "/contacts", name: "Contacts" }
   ]

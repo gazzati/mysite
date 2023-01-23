@@ -12,11 +12,23 @@ const About = () => {
     const ref = useRef<HTMLIFrameElement>(null)
     loadSection(ref)
 
-    return  <section ref={ref}>
+    return  <section ref={ref} id="about">
         <h3>{l.home.about.heading[locale]}</h3>
         <div className={style.about}>
-            <p className={style.aboutText}>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga delectus cum assumenda tenetur necessitatibus, inventore perferendis vitae excepturi sit suscipit asperiores sunt corrupti, veritatis sed architecto aut magni? Sequi, ex.            </p>
+            <div className={style.aboutText}>
+                <p>{l.home.about.start[locale]}</p>
+                <p>
+                    {l.home.about.hobby[locale]}
+                    <a href="https://rfmli.ru/" target="_blank">{l.home.about.school[locale]}</a>
+                </p>
+                <p>
+                {l.home.about.bio[locale]}
+                <span className={style.fake}>{l.home.about.fakeBio[locale]}</span>
+                {l.home.about.bioContinue[locale]}
+                </p>
+                <p>{l.home.about.end[locale]}</p>
+            </div>
+
             <div className={style.portrait}>
                 <img src={photo} alt="photo" />
             </div>

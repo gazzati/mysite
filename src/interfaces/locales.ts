@@ -6,6 +6,6 @@ export enum Locale {
 
 export enum LocaleTitle {
   English = "English",
-  Russian = "Russian",
-  Iron = "Iron"
+  Russian = "Русский",
+  Iron = "Ирон"
 }

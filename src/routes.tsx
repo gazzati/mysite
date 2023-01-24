@@ -15,14 +15,14 @@ const routes = [
     name: "home",
     path: "",
     Component: Home,
-    Fallback: null,
+    Fallback: null
   },
   {
     name: "test-page",
     path: "test-page",
     Component: TestPage,
-    Fallback: null,
-  },
+    Fallback: null
+  }
 ] as Route[]
 
 export default routes

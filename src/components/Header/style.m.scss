@@ -46,12 +46,13 @@
     }
   }
 
-  &::before, &::after {
+  &::before,
+  &::after {
     position: absolute;
     background: $bg;
     z-index: -1;
     transition: 1s;
-    content: '';
+    content: "";
   }
 
   &::before {
@@ -98,7 +99,7 @@
       transition: $transition;
 
       &:hover {
-        color: $primary
+        color: $primary;
       }
     }
   }
@@ -111,6 +112,6 @@
   margin-left: 10px;
 
   &:hover {
-    color: $primary
+    color: $primary;
   }
 }

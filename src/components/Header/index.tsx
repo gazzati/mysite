@@ -19,15 +19,15 @@ const Header = ({ setLocale, menuOpen, toggleMenuOpen }) => {
   const [position, setPosition] = useState(window.pageYOffset)
   const [visible, setVisible] = useState(true)
 
-  useEffect(()=> {
+  useEffect(() => {
     window.addEventListener("scroll", () => {
       const moving = window.pageYOffset
 
-      if(visible && moving < SCROLL_LIMIT) return
+      if (visible && moving < SCROLL_LIMIT) return
 
       setVisible(position > moving)
       setPosition(moving)
-   })
+    })
   })
 
   const setCurrentLocale = () => {
@@ -39,9 +39,7 @@ const Header = ({ setLocale, menuOpen, toggleMenuOpen }) => {
 
   return (
     <header className={classNames(style.header, { [style.hide]: !visible })}>
-      <Link to="/" className={style.logo}
-      style={animation.getDuration()}
-      >
+      <Link to="/" className={style.logo} style={animation.getDuration()}>
         <span className={style.logoText}>gazzati</span>
       </Link>
 
@@ -63,7 +61,7 @@ const Header = ({ setLocale, menuOpen, toggleMenuOpen }) => {
 
       <Burger open={menuOpen} toggleMenuOpen={toggleMenuOpen} animationStyle={animation.getDuration()} />
 
-      <Menu open={menuOpen} toggleMenuOpen={toggleMenuOpen} setCurrentLocale={setCurrentLocale}/>
+      <Menu open={menuOpen} toggleMenuOpen={toggleMenuOpen} setCurrentLocale={setCurrentLocale} />
     </header>
   )
 }

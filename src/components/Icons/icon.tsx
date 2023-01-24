@@ -1,6 +1,6 @@
-import React from 'react'
-import {Telegram, GitHub, Instagram, LinkedIn, Spotify} from '@components/Icons'
-import { Icon } from '@interfaces/icons'
+import React from "react"
+import { Telegram, GitHub, Instagram, LinkedIn, Spotify } from "@components/Icons"
+import { Icon } from "@interfaces/icons"
 
 export const Icons = ({ name }) => {
   switch (name) {

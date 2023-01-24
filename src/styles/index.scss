@@ -27,8 +27,8 @@ body {
   }
 }
 
- /* Scrollbar styles */
- html {
+/* Scrollbar styles */
+html {
   ::-webkit-scrollbar {
     width: 5px;
   }
@@ -43,7 +43,7 @@ body {
 
 a {
   text-decoration: none;
-  color: $secondary
+  color: $secondary;
 }
 
 p {
@@ -56,9 +56,11 @@ ul {
   list-style: none;
 }
 
-*, ::before, ::after {
-    box-sizing: inherit;
-    user-select: none;
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  user-select: none;
 }
 
 h3 {
@@ -88,7 +90,6 @@ h3 {
       margin-left: 8px;
       width: 100%;
     }
-
   }
 }
 
@@ -122,7 +123,7 @@ section {
     max-width: 600px;
   }
   @media (max-width: $mobile) {
-    max-width: 100%
+    max-width: 100%;
   }
 
   &:not(:first-child) {
@@ -132,6 +133,7 @@ section {
 
   &.visible {
     opacity: 1;
-    transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+    transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
+      transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
   }
 }

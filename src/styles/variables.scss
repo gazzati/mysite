@@ -5,7 +5,6 @@ $secondary-light: #a8b2d1;
 $secondary-lightest: #ccd6f6;
 $secondary-dark: #282828;
 
+$transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
-$transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-
-$mobile: 767px
+$mobile: 767px;

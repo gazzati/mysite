@@ -15,7 +15,8 @@
   }
 }
 
-.burgerLeft, .burgerRight {
+.burgerLeft,
+.burgerRight {
   height: 2px;
   width: 15px;
   background-color: $primary;
@@ -28,7 +29,8 @@
   border-radius: 4px 0 0 4px;
   left: 0;
 
-  &:before, &:after {
+  &:before,
+  &:after {
     transition-duration: 0.5s;
     position: absolute;
     width: 15px;
@@ -51,7 +53,8 @@
   border-radius: 0 4px 4px 0;
   left: 15px;
 
-  &:before, &:after {
+  &:before,
+  &:after {
     transition-duration: 0.5s;
     position: absolute;
     width: 15px;
@@ -97,4 +100,3 @@
     }
   }
 }
-

@@ -34,13 +34,14 @@
   }
 }
 
-.link, .locale {
+.link,
+.locale {
   color: $secondary-lightest;
   font-size: 16px;
   transition: $transition;
 
   &:hover {
-    color: $primary
+    color: $primary;
   }
 }
 

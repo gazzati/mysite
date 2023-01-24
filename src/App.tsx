@@ -6,6 +6,7 @@ import SideSocial from "@root/components/SideSocial"
 import SideEmail from "@root/components/SideEmail"
 //import Spotify from "@root/components/Spotify"
 import { Locale, LocaleContext } from "@root/helpers/locales"
+import {api} from '@root/api'
 
 import routes from "./routes"
 
@@ -14,10 +15,12 @@ const App = () => {
   const [locale, setLocale] = useState(Locale.En)
 
   useEffect(() => {
-    window.history.scrollRestoration = 'manual'
+    window.history.scrollRestoration = "manual"
 
     const storageLocale = localStorage.getItem("locale") as Locale
-    if(Object.values(Locale).includes(storageLocale)) setLocale(storageLocale)
+    if (Object.values(Locale).includes(storageLocale)) setLocale(storageLocale)
+
+    api.post("/stats/visit")
   }, [])
 
   const toggleMenuOpen = () => {
@@ -27,7 +30,7 @@ const App = () => {
 
   return (
     <>
-      <LocaleContext.Provider value={locale} >
+      <LocaleContext.Provider value={locale}>
         <Header setLocale={setLocale} menuOpen={menuOpen} toggleMenuOpen={toggleMenuOpen} />
         <SideSocial />
         <SideEmail />

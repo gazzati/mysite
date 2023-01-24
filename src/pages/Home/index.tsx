@@ -4,10 +4,12 @@ import Start from "./Start"
 import About from "./About"
 
 const Home = () => {
-    return <>
-        <Start />
-        <About/>
+  return (
+    <>
+      <Start />
+      <About />
     </>
+  )
 }
 
 export default Home

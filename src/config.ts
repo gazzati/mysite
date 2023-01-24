@@ -1,6 +1,9 @@
 import { Icon } from "@interfaces/icons"
 
 const config = {
+  dbHost: "http://127.0.0.1:8000",
+  //  dbHost: "https://gazzati.site",
+
   email: "gazzaevtimur@gmail.com",
 
   socialMedia: [

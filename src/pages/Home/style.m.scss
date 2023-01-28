@@ -92,6 +92,10 @@
       }
     }
 
+    &:before {
+      opacity: 0;
+    }
+
     img {
       filter: none;
     }
@@ -110,6 +114,7 @@
     }
   }
 
+  &:before,
   &:after {
     content: "";
     position: absolute;
@@ -122,6 +127,14 @@
       width: 224px;
       height: 224px;
     }
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+    background-color: $primary;
+    opacity: .2;
+    z-index: 1;
   }
 
   &:after {

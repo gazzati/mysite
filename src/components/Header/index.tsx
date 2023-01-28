@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useContext } from "react"
+import React, { useEffect, useContext } from "react"
 import { Link } from "react-router-dom"
 import { HashLink } from "react-router-hash-link"
-import classNames from "classnames"
 
 import Menu from "@components/Menu"
 import Burger from "@components/Burger"
@@ -12,21 +11,30 @@ import config from "@root/config"
 import style from "./style.m.scss"
 
 const animation = new Animation(Fade.Down, 0)
-const SCROLL_LIMIT = window.screen.width > 767 ? 400 : 200
+const SCROLL_LIMIT = 200
 
 const Header = ({ setLocale, menuOpen, toggleMenuOpen }) => {
   const locale = useContext(LocaleContext)
-  const [position, setPosition] = useState(window.pageYOffset)
-  const [visible, setVisible] = useState(true)
 
   useEffect(() => {
+    const body = document.body
+
+    const scrollUp = "scroll-up"
+    const scrollDown = "scroll-down"
+    let lastScroll = 0
+
     window.addEventListener("scroll", () => {
-      const moving = window.pageYOffset
+      const currentScroll = window.pageYOffset
 
-      if (visible && moving < SCROLL_LIMIT) return
+      if (currentScroll > SCROLL_LIMIT && currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+        body.classList.remove(scrollUp)
+        body.classList.add(scrollDown)
+      } else if (currentScroll < lastScroll && body.classList.contains(scrollDown)) {
+        body.classList.remove(scrollDown)
+        body.classList.add(scrollUp)
+      }
 
-      setVisible(position > moving)
-      setPosition(moving)
+      lastScroll = currentScroll
     })
   })
 
@@ -38,7 +46,7 @@ const Header = ({ setLocale, menuOpen, toggleMenuOpen }) => {
   }
 
   return (
-    <header className={classNames(style.header, { [style.hide]: !visible })}>
+    <header className={style.header}>
       <Link to="/" className={style.logo} style={animation.getDuration()}>
         <span className={style.logoText}>gazzati</span>
       </Link>

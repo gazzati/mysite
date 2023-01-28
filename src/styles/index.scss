@@ -15,6 +15,14 @@ body {
   @media (max-width: $mobile) {
     font-size: 18px;
   }
+
+  &.scroll-down header{
+    transform: translate3d(0, -100%, 0);
+  }
+
+  &.scroll-up header {
+    transform: none;
+  }
 }
 
 .blur {

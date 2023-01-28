@@ -13,17 +13,13 @@
   height: 100px;
   transition: $transition;
   z-index: 5;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.80);
   backdrop-filter: blur(10px);
-  transition: top 0.4s ease-out;
+  transition: transform 0.4s;
 
   @media (max-width: $mobile) {
     padding: 0 16px;
   }
-}
-
-.hide {
-  top: -100px;
 }
 
 .logo {

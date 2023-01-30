@@ -1,0 +1,14 @@
+@import "src/styles/variables.scss";
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 16px;
+  text-align: center;
+
+  @media (max-width: $mobile) {
+
+  }
+}

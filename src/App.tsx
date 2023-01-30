@@ -4,6 +4,7 @@ import { Navigate, Route, Routes } from "react-router"
 import Header from "@components/Header"
 import SideSocial from "@root/components/SideSocial"
 import SideEmail from "@root/components/SideEmail"
+import Footer from "@root/components/Footer"
 //import Spotify from "@root/components/Spotify"
 import { Locale, LocaleContext } from "@root/helpers/locales"
 import {api} from '@root/api'
@@ -11,7 +12,6 @@ import {api} from '@root/api'
 import routes from "./routes"
 
 const App = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
   const [locale, setLocale] = useState(Locale.En)
 
   useEffect(() => {
@@ -23,15 +23,10 @@ const App = () => {
     api.post("/stats/visit")
   }, [])
 
-  const toggleMenuOpen = () => {
-    document.body.classList.toggle("blur")
-    setMenuOpen(!menuOpen)
-  }
-
   return (
     <>
       <LocaleContext.Provider value={locale}>
-        <Header setLocale={setLocale} menuOpen={menuOpen} toggleMenuOpen={toggleMenuOpen} />
+        <Header setLocale={setLocale}/>
         <SideSocial />
         <SideEmail />
         {/* <Spotify /> */}
@@ -54,6 +49,8 @@ const App = () => {
           </Routes>
         </main>
       </LocaleContext.Provider>
+
+      <Footer />
     </>
   )
 }

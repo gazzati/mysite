@@ -1,6 +1,22 @@
 @import "./animations.scss";
 @import "./variables.scss";
 
+html {
+  scroll-behavior: smooth;
+
+/* Scrollbar styles */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: $secondary-dark;
+    border-radius: 8px;
+  }
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -8,7 +24,7 @@ body {
   width: 100%;
   min-height: 100%;
   overflow-x: hidden;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.2;
   background-color: $bg;
   color: $secondary;
@@ -34,21 +50,6 @@ body {
     user-select: none;
   }
 }
-
-/* Scrollbar styles */
-html {
-  ::-webkit-scrollbar {
-    width: 5px;
-  }
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: $secondary-dark;
-    border-radius: 8px;
-  }
-}
-
 a {
   text-decoration: none;
   color: $secondary;

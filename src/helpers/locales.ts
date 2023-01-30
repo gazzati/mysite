@@ -3,6 +3,18 @@ import { createContext } from "react"
 import { Locale, LocaleTitle } from "@interfaces/locales"
 
 export default {
+  links: {
+    about: {
+      [Locale.En]: "About",
+      [Locale.Ru]: "Обо мне",
+      [Locale.Os]: "Обо мне"
+    },
+    resume: {
+      [Locale.En]: "Resume",
+      [Locale.Ru]: "Резюме",
+      [Locale.Os]: "Резюме"
+    }
+  },
   home: {
     start: {
       welcome: {

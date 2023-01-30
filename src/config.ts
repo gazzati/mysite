@@ -1,3 +1,5 @@
+import l from "@root/helpers/locales"
+
 import { Icon } from "@interfaces/icons"
 
 const config = {
@@ -25,11 +27,9 @@ const config = {
     }
   ],
 
-  menuRoutes: [
-    { url: "/#about", name: "About" },
-    { url: "/resume", name: "Resume" },
-    { url: "/contacts", name: "Contacts" }
-  ]
+  menuRoutes: [{ url: "/#about", name: l.links.about }],
+
+  resume: { url: "https://hh.ru/resume/906aceeaff07e95aed0039ed1f545074544a54", name: l.links.resume }
 }
 
 export default config

@@ -82,29 +82,23 @@
 
 .list {
   display: flex;
-  margin-right: 5px;
 
   @media (max-width: $mobile) {
     display: none;
   }
+}
 
-  li {
-    margin: 0 5px;
+.link {
+  margin: 0 5px;
+  transition: $transition;
 
-    a {
-      transition: $transition;
-
-      &:hover {
-        color: $primary;
-      }
-    }
+  &:hover {
+    color: $primary;
   }
 }
 
 .divider {
-  @media (max-width: $mobile) {
-    display: none;
-  }
+  margin-left: 5px;
 }
 
 .locale {

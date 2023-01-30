@@ -53,12 +53,16 @@ const Header = ({ setLocale }) => {
         <ul className={style.list}>
           {config.menuRoutes.map(item => (
             <li key={item.url} style={animation.getDuration()}>
-              <HashLink to={item.url}>{item.name}</HashLink>
+              <HashLink className={style.link} to={item.url}>{item.name[locale]}</HashLink>
             </li>
           ))}
         </ul>
 
-        <div style={animation.getDuration()} className={style.divider} >|</div>
+        <a href={config.resume.url} target="_blank" className={style.link} style={animation.getDuration()}>
+          {config.resume.name[locale]}
+        </a>
+
+        <div className={style.divider} style={animation.getDuration()}>|</div>
 
         <div className={style.locale} onClick={setCurrentLocale} style={animation.getDuration()}>
           {getLocaleTitle(locale)}

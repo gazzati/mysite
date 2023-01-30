@@ -14,7 +14,7 @@ const About = () => {
 
   return (
     <section ref={ref} id="about">
-      <h3>{l.home.about.heading[locale]}</h3>
+      <h3 className="styled">{l.home.about.heading[locale]}</h3>
       <div className={style.about}>
         <div className={style.aboutText}>
           <p>{l.home.about.start[locale]}</p>

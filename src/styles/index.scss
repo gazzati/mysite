@@ -78,26 +78,29 @@ h3 {
   position: relative;
   margin: 0 0 32px;
   font-size: 30px;
-  white-space: nowrap;
   font-weight: 600;
+  white-space: pre-wrap;
 
   @media (max-width: $mobile) {
     font-size: 24px;
     width: 100%;
   }
 
-  &::after {
-    content: "";
-    display: block;
-    position: relative;
-    top: 0;
-    width: 300px;
-    height: 1px;
-    margin-left: 20px;
-    background-color: $primary;
-    @media (max-width: $mobile) {
-      margin-left: 8px;
-      width: 100%;
+  &.styled {
+    white-space: nowrap;
+    &::after {
+      content: "";
+      display: block;
+      position: relative;
+      top: 0;
+      width: 300px;
+      height: 1px;
+      margin-left: 20px;
+      background-color: $primary;
+      @media (max-width: $mobile) {
+        margin-left: 8px;
+        width: 100%;
+      }
     }
   }
 }

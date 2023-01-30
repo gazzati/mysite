@@ -1,32 +1,8 @@
 @import "src/styles/variables.scss";
 
-.miniHeading {
-  font-size: 16px;
-  color: $primary;
-  margin-bottom: 16px;
-}
-
-.bigHeading {
-  font-weight: 600;
-  font-size: 79px;
-
-  @media (max-width: $mobile) {
-    font-size: 40px;
-    line-height: 1.1;
-  }
-}
-
-.lightestHeading {
-  color: $secondary-lightest;
-}
-
-.description {
-  white-space: pre-wrap;
-  margin-top: 16px;
-}
-
 .about {
   display: flex;
+
   @media (max-width: $mobile) {
     flex-direction: column;
   }
@@ -34,6 +10,7 @@
 
 .aboutText {
   width: 60%;
+
   @media (max-width: $mobile) {
     width: 100%;
   }
@@ -86,6 +63,7 @@
     &:after {
       top: 15px;
       left: 15px;
+
       @media (max-width: $mobile) {
         top: 10px;
         left: 10px;
@@ -133,7 +111,7 @@
     top: 0;
     left: 0;
     background-color: $primary;
-    opacity: .2;
+    opacity: 0.2;
     z-index: 1;
   }
 

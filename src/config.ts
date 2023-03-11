@@ -27,9 +27,7 @@ const config = {
     }
   ],
 
-  menuRoutes: [{ url: "/#about", name: l.links.about }],
-
-  resume: { url: "https://hh.ru/resume/906aceeaff07e95aed0039ed1f545074544a54", name: l.links.resume }
+  menuRoutes: [{ url: "/#about", name: l.links.about }]
 }
 
 export default config

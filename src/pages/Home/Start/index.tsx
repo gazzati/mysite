@@ -1,8 +1,8 @@
-import React, { useContext } from "react"
 import classNames from "classnames"
+import React, { useContext } from "react"
 
-import l, { LocaleContext } from "@root/helpers/locales"
 import { Animation, Fade } from "@root/helpers/animations"
+import l, { LocaleContext } from "@root/helpers/locales"
 
 import style from "./style.m.scss"
 

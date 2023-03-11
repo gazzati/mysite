@@ -1,43 +1,43 @@
 {
-    "compilerOptions": {
-        "baseUrl": "src",
-        "outDir": "./build",
-        "target": "es5",
-        "module": "esnext",
-        "types": ["node"],
-        "lib": ["dom", "dom.iterable", "esnext"],
-        "jsx": "react",
-        "moduleResolution": "node",
-        "allowJs": false,
-        "preserveConstEnums": true,
-        "removeComments": true,
-        "sourceMap": true,
-        "skipLibCheck": true,
-        "strictNullChecks": true,
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "forceConsistentCasingInFileNames": false,
-        "resolveJsonModule": true,
-        "isolatedModules": false,
-        "noFallthroughCasesInSwitch": true,
-        "downlevelIteration": true,
-        "paths": {
-            "@root/*": ["./*"],
-            "@assets/*": ["./assets/*"],
-            "@components/*": ["./components/*"],
-            "@pages/*": ["./pages/*"],
-            "@styles/*": ["./styles/*"],
-            "@interfaces/*": ["./interfaces/*"]
-        },
-        "plugins": [
-            {
-              "name": "typescript-plugin-css-modules",
-              "options": {
-                "customMatcher": "\\.m\\.(c|sa|sc)ss$"
-              }
-            }
-        ]
+  "compilerOptions": {
+    "baseUrl": "src",
+    "outDir": "./build",
+    "target": "es5",
+    "module": "esnext",
+    "types": ["node"],
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "react",
+    "moduleResolution": "node",
+    "allowJs": false,
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": false,
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "noFallthroughCasesInSwitch": true,
+    "downlevelIteration": true,
+    "paths": {
+      "@root/*": ["./*"],
+      "@assets/*": ["./assets/*"],
+      "@components/*": ["./components/*"],
+      "@pages/*": ["./pages/*"],
+      "@styles/*": ["./styles/*"],
+      "@interfaces/*": ["./interfaces/*"]
     },
-    "include": ["src", "custom.d.ts"],
-    "exclude": ["node_modules", "build"]
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "customMatcher": "\\.m\\.(c|sa|sc)ss$"
+        }
+      }
+    ]
+  },
+  "include": ["src/**/*", "custom.d.ts", ".eslintrc.js"],
+  "exclude": ["node_modules", "build"]
 }

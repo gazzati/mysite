@@ -2,7 +2,8 @@ import React, { useEffect, useContext } from "react"
 import { Link } from "react-router-dom"
 import { HashLink } from "react-router-hash-link"
 
-import { LocaleContext, getLocaleTitle, getNextLocale } from "@root/helpers/locales"
+import l, { LocaleContext, getLocaleTitle, getNextLocale } from "@root/helpers/locales"
+import resume from "@root/assets/resume.pdf"
 import { Animation, Fade } from "@root/helpers/animations"
 import config from "@root/config"
 
@@ -58,8 +59,8 @@ const Header = ({ setLocale }) => {
           ))}
         </ul>
 
-        <a href={config.resume.url} target="_blank" className={style.link} style={animation.getDuration()}>
-          {config.resume.name[locale]}
+        <a href={resume} target="_blank" className={style.link} style={animation.getDuration()}>
+          {l.links.resume[locale]}
         </a>
 
         <div className={style.divider} style={animation.getDuration()}>|</div>

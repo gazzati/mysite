@@ -1,8 +1,8 @@
 import React, { useContext, useRef } from "react"
 
-import l, { LocaleContext } from "@root/helpers/locales"
 import photo from "@root/assets/images/photo.png"
 import { loadSection } from "@root/helpers/dom"
+import l, { LocaleContext } from "@root/helpers/locales"
 
 import style from "./style.m.scss"
 

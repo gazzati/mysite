@@ -10,7 +10,7 @@
     "build": "yarn clean && webpack --progress --mode production",
     "type": "tsc --project tsconfig.json --noEmit",
     "format": "prettier --write \"src/\"",
-    "lint": "eslint src/**/*.ts --fix",
+    "lint": "eslint ./src --ext .ts,.tsx,.js,.jsx --quiet --color",
     "clean": "rm -rf ./build"
   },
   "dependencies": {

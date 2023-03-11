@@ -1,10 +1,13 @@
-import React, { useState, useEffect, useRef } from "react"
-import classNames from "classnames"
 
 import Icons from "@components/Icons"
-import { Icon } from "@interfaces/icons"
+import classNames from "classnames"
+import React, { useState } from "react"
+
+
 import { Animation, Fade } from "@root/helpers/animations"
 import { useOutsideClick } from "@root/helpers/dom"
+
+import { Icon } from "@interfaces/icons"
 
 import style from "./style.m.scss"
 

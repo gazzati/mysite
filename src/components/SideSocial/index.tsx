@@ -1,6 +1,6 @@
+import Icons from "@components/Icons"
 import React from "react"
 
-import Icons from "@components/Icons"
 import config from "@root/config"
 import { Animation, Fade } from "@root/helpers/animations"
 

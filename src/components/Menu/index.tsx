@@ -1,6 +1,6 @@
+import classNames from "classnames"
 import React, { useContext } from "react"
 import { HashLink } from "react-router-hash-link"
-import classNames from "classnames"
 
 import config from "@root/config"
 import { LocaleContext, getLocaleTitle } from "@root/helpers/locales"

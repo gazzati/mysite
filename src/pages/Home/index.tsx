@@ -1,8 +1,8 @@
 import React from "react"
 
-import Start from "./Start"
 import About from "./About"
 import Contacts from "./Contacts"
+import Start from "./Start"
 
 const Home = () => {
   return (

@@ -23,6 +23,6 @@ const routes = [
     Component: TestPage,
     Fallback: null
   }
-] as Route[]
+] as Array<Route>
 
 export default routes

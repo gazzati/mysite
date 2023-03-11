@@ -1,13 +1,13 @@
+import Header from "@components/Header"
 import React, { useState, useEffect, Suspense } from "react"
 import { Navigate, Route, Routes } from "react-router"
 
-import Header from "@components/Header"
-import SideSocial from "@root/components/SideSocial"
-import SideEmail from "@root/components/SideEmail"
+import {api} from '@root/api'
 import Footer from "@root/components/Footer"
+import SideEmail from "@root/components/SideEmail"
+import SideSocial from "@root/components/SideSocial"
 //import Spotify from "@root/components/Spotify"
 import { Locale, LocaleContext } from "@root/helpers/locales"
-import {api} from '@root/api'
 
 import routes from "./routes"
 

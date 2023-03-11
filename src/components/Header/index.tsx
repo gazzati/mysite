@@ -2,10 +2,10 @@ import React, { useEffect, useContext } from "react"
 import { Link } from "react-router-dom"
 import { HashLink } from "react-router-hash-link"
 
-import l, { LocaleContext, getLocaleTitle, getNextLocale } from "@root/helpers/locales"
 import resume from "@root/assets/resume.pdf"
-import { Animation, Fade } from "@root/helpers/animations"
 import config from "@root/config"
+import { Animation, Fade } from "@root/helpers/animations"
+import l, { LocaleContext, getLocaleTitle, getNextLocale } from "@root/helpers/locales"
 
 import style from "./style.m.scss"
 

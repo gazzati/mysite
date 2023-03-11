@@ -1,5 +1,6 @@
-import React from "react"
 import { Telegram, GitHub, Instagram, LinkedIn, Spotify } from "@components/Icons"
+import React from "react"
+
 import { Icon } from "@interfaces/icons"
 
 export const Icons = ({ name }) => {

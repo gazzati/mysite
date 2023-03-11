@@ -13,7 +13,6 @@ const Footer = () => {
 
   const fetchStats = async () => {
     const response = await api.get("/stats")
-    console.log(response);
 
     setStats({visits: response.data.visits})
   }

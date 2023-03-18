@@ -1,5 +1,3 @@
-import { createContext } from "react"
-
 import { Locale, LocaleTitle } from "@interfaces/locales"
 
 export default {
@@ -109,16 +107,4 @@ export const getLocaleTitle = (locale: Locale): LocaleTitle => {
   }
 }
 
-export const getNextLocale = (locale: Locale): Locale => {
-  switch (locale) {
-    case Locale.En:
-      return Locale.Ru
-    // case Locale.Ru:
-    //   return Locale.Os
-    default:
-      return Locale.En
-  }
-}
-
-export const LocaleContext = createContext(Locale.En)
-export { Locale }
+export { useDictionary, default as Dictionary } from "@gazzati/react-dictionary"

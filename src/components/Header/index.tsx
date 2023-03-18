@@ -1,19 +1,19 @@
-import React, { useEffect, useContext } from "react"
+import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
 import { HashLink } from "react-router-hash-link"
 
 import resume from "@root/assets/resume.pdf"
 import config from "@root/config"
+import d, { useDictionary, getLocaleTitle } from "@root/dictionary"
 import { Animation, Fade } from "@root/helpers/animations"
-import l, { LocaleContext, getLocaleTitle, getNextLocale } from "@root/helpers/locales"
 
 import style from "./style.m.scss"
 
 const animation = new Animation(Fade.Down, 0)
 const SCROLL_LIMIT = 200
 
-const Header = ({ setLocale }) => {
-  const locale = useContext(LocaleContext)
+const Header = () => {
+  const [locale, setNextLocale] = useDictionary()
 
   useEffect(() => {
     const body = document.body
@@ -37,13 +37,6 @@ const Header = ({ setLocale }) => {
     })
   }, [])
 
-  const setCurrentLocale = () => {
-    const currentLocale = getNextLocale(locale)
-
-    setLocale(currentLocale)
-    localStorage.setItem("locale", currentLocale)
-  }
-
   return (
     <header className={style.header}>
       <Link to="/" className={style.logo} style={animation.getDuration()}>
@@ -54,18 +47,22 @@ const Header = ({ setLocale }) => {
         <ul className={style.list}>
           {config.menuRoutes.map(item => (
             <li key={item.url} style={animation.getDuration()}>
-              <HashLink className={style.link} to={item.url}>{item.name[locale]}</HashLink>
+              <HashLink className={style.link} to={item.url}>
+                {item.name[locale]}
+              </HashLink>
             </li>
           ))}
         </ul>
 
         <a href={resume} target="_blank" className={style.link} style={animation.getDuration()}>
-          {l.links.resume[locale]}
+          {d.links.resume[locale]}
         </a>
 
-        <div className={style.divider} style={animation.getDuration()}>|</div>
+        <div className={style.divider} style={animation.getDuration()}>
+          |
+        </div>
 
-        <div className={style.locale} onClick={setCurrentLocale} style={animation.getDuration()}>
+        <div className={style.locale} onClick={setNextLocale} style={animation.getDuration()}>
           {getLocaleTitle(locale)}
         </div>
       </nav>

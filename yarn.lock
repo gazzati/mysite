@@ -1017,6 +1017,11 @@
     eslint-plugin-import "^2.26.0"
     prettier "^2.7.1"
 
+"@gazzati/react-dictionary@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@gazzati/react-dictionary/-/react-dictionary-1.0.1.tgz#13a3b3c5d390f4dffd1f6ec8bb72c915fe73d6ab"
+  integrity sha512-7bxoMEcJdeMlJE0FXIL5CZUunStogQLxsifoOScmQsJlC2QcSxjZkkt/nR2wz8dYca3kfoiU8ABgeYBBOsq2+g==
+
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.8.tgz#03595ac2075a4dc0f191cc2131de14fbd7d410b9"

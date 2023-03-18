@@ -1,14 +1,14 @@
 import classNames from "classnames"
-import React, { useContext } from "react"
+import React from "react"
 import { HashLink } from "react-router-hash-link"
 
 import config from "@root/config"
-import { LocaleContext, getLocaleTitle } from "@root/helpers/locales"
+import { useDictionary, getLocaleTitle } from "@root/dictionary"
 
 import style from "./style.m.scss"
 
 const Menu = ({ open, toggleMenuOpen, setCurrentLocale }) => {
-  const locale = useContext(LocaleContext)
+  const [locale] = useDictionary()
 
   return (
     <aside className={classNames(style.menu, { [style.open]: open })}>

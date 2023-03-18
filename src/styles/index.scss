@@ -4,7 +4,7 @@
 html {
   scroll-behavior: smooth;
 
-/* Scrollbar styles */
+  /* Scrollbar styles */
   ::-webkit-scrollbar {
     width: 5px;
   }
@@ -32,7 +32,7 @@ body {
     font-size: 18px;
   }
 
-  &.scroll-down header{
+  &.scroll-down header {
     transform: translate3d(0, -100%, 0);
   }
 

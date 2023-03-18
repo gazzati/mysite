@@ -1,21 +1,21 @@
-import React, { useRef, useContext } from "react"
+import React, { useRef } from "react"
 
 import Icons from "@root/components/Icons"
 import config from "@root/config"
+import d, { useDictionary } from "@root/dictionary"
 import { loadSection } from "@root/helpers/dom"
-import l, { LocaleContext } from "@root/helpers/locales"
 
 import style from "./style.m.scss"
 
 const Contacts = () => {
-  const locale = useContext(LocaleContext)
+  const [locale] = useDictionary()
 
   const ref = useRef<HTMLIFrameElement>(null)
   loadSection(ref)
 
   return (
     <section ref={ref} id="contacts" className={style.contacts}>
-      <h3>{l.home.contacts.heading[locale]}</h3>
+      <h3>{d.home.contacts.heading[locale]}</h3>
 
       <ul className={style.list}>
         {config.socialMedia.map(({ url, name }, index) => (

@@ -1,13 +1,13 @@
 @import "src/styles/variables.scss";
 
 .contacts {
-    display: none;
-    flex-direction: column;
-    align-items: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
 
-    @media (max-width: $mobile) {
-       display: flex;
-    }
+  @media (max-width: $mobile) {
+    display: flex;
+  }
 }
 
 .list {

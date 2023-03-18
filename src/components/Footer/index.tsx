@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
 
-import {api} from "@root/api"
+import { api } from "@root/api"
 
 import style from "./style.m.scss"
 
 const Footer = () => {
-  const [stats, setStats] = useState({visits: 0})
+  const [stats, setStats] = useState({ visits: 0 })
 
   useEffect(() => {
     fetchStats()
@@ -14,7 +14,7 @@ const Footer = () => {
   const fetchStats = async () => {
     const response = await api.get("/stats")
 
-    setStats({visits: response.data.visits})
+    setStats({ visits: response.data.visits })
   }
 
   return (

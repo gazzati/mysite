@@ -1,4 +1,4 @@
-import l from "@root/helpers/locales"
+import l from "@root/dictionary"
 
 import { Icon } from "@interfaces/icons"
 

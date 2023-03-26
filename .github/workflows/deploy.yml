@@ -21,7 +21,7 @@ jobs:
                 KEY: ${{ secrets.PRIVATE_KEY }}
                 PORT: 22
                 script: |
-                    cd /home/tim
+                    cd /home/tim/mysite
                     git checkout master
                     git pull
                     git status

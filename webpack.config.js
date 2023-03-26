@@ -82,11 +82,13 @@ module.exports = (env, { mode }) => {
 
       alias: {
         "@root": path.resolve(__dirname, "./src"),
+        "@api": path.resolve(__dirname, "./src/api"),
         "@assets": path.resolve(__dirname, "./src/assets"),
         "@components": path.resolve(__dirname, "./src/components"),
+        "@helpers": path.resolve(__dirname, "./src/helpers"),
+        "@interfaces": path.resolve(__dirname, "./src/interfaces"),
         "@pages": path.resolve(__dirname, "./src/pages"),
-        "@styles": path.resolve(__dirname, "./src/styles"),
-        "@interfaces": path.resolve(__dirname, "./src/interfaces")
+        "@styles": path.resolve(__dirname, "./src/styles")
       }
     },
 

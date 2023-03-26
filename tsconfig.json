@@ -23,11 +23,13 @@
     "downlevelIteration": true,
     "paths": {
       "@root/*": ["./*"],
+      "@api/*": ["./api/*"],
       "@assets/*": ["./assets/*"],
       "@components/*": ["./components/*"],
+      "@helpers/*": ["./helpers/*"],
+      "@interfaces/*": ["./interfaces/*"],
       "@pages/*": ["./pages/*"],
-      "@styles/*": ["./styles/*"],
-      "@interfaces/*": ["./interfaces/*"]
+      "@styles/*": ["./styles/*"]
     },
     "plugins": [
       {

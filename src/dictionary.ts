@@ -1,3 +1,5 @@
+import age from "@helpers/age"
+
 import { Locale, LocaleTitle } from "@interfaces/locales"
 
 export default {
@@ -44,9 +46,9 @@ export default {
         [Locale.Os]: "Обо мне"
       },
       start: {
-        [Locale.En]: "I am 23. I was born in the Republic of North Ossetia-Alania.",
-        [Locale.Ru]: "Мне 23. Я родился в Республике Северная Осетия-Алания.",
-        [Locale.Os]: "Мне 23. Я родился в Республике Северная Осетия-Алания."
+        [Locale.En]: `I am ${age}. I was born in the Republic of North Ossetia-Alania.`,
+        [Locale.Ru]: `Мне ${age}. Я родился в Республике Северная Осетия-Алания.`,
+        [Locale.Os]: `Мне ${age}. Я родился в Республике Северная Осетия-Алания.`
       },
       hobby: {
         [Locale.En]: "From an early age I was interested in electronics. Helped me develop in this area my school - ",

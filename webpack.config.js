@@ -52,7 +52,7 @@ module.exports = (env, { mode }) => {
           loader: "babel-loader"
         },
         {
-          test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|pdf)$/,
+          test: /\.(ico|jpg|jpeg|png|svg|pdf)$/,
           include: sourceDir,
           type: "asset/resource"
         },
@@ -70,7 +70,9 @@ module.exports = (env, { mode }) => {
                 {
                   loader: "css-loader",
                   options: {
-                    modules: true
+                    modules: {
+                      localIdentName: `${isProduction ? "" : "[local]--"}[hash:base64:5]`
+                    }
                   }
                 },
                 "sass-loader"

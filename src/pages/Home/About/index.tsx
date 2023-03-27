@@ -1,6 +1,6 @@
 import React, { useRef } from "react"
 
-import photo from "@root/assets/images/photo.png"
+import photo from "@root/assets/images/photo.jpg"
 import d, { useDictionary } from "@root/dictionary"
 import { loadSection } from "@root/helpers/dom"
 

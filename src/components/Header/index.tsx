@@ -2,7 +2,6 @@ import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
 import { HashLink } from "react-router-hash-link"
 
-import resume from "@root/assets/resume.pdf"
 import config from "@root/config"
 import d, { useDictionary, getLocaleTitle } from "@root/dictionary"
 import { Animation, Fade } from "@root/helpers/animations"
@@ -54,7 +53,7 @@ const Header = () => {
           ))}
         </ul>
 
-        <a href={resume} target="_blank" className={style.link} style={animation.getDuration()}>
+        <a href="/resume.pdf" target="_blank" className={style.link} style={animation.getDuration()}>
           {d.links.resume[locale]}
         </a>
 

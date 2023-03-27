@@ -13,11 +13,6 @@ declare module "*.jpg" {
   export default value
 }
 
-declare module "*.otf" {
-  const value: any
-  export default value
-}
-
 declare module "*.ico" {
   const value: any
   export default value

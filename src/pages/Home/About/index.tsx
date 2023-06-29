@@ -27,6 +27,7 @@ const About = () => {
           <p>
             {d.home.about.bio[locale]}
             <span className={style.fake}>{d.home.about.fakeBio[locale]}</span>
+            {" "}
             {d.home.about.bioContinue[locale]}
           </p>
           <p>{d.home.about.end[locale]}</p>

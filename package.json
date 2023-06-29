@@ -7,11 +7,12 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack serve --progress --mode development",
-    "build": "yarn clean && webpack --progress --mode production",
+    "build": "yarn clean && webpack --progress --mode production && clean:modules",
     "type": "tsc --project tsconfig.json --noEmit",
     "format": "prettier --write \"src/\"",
     "lint": "eslint ./src --ext .ts,.tsx,.js,.jsx --quiet --color",
-    "clean": "rm -rf ./build"
+    "clean": "rm -rf ./build",
+    "clean:modules": "rm -rf ./node_modules"
   },
   "dependencies": {
     "@gazzati/react-dictionary": "^1.0.1",

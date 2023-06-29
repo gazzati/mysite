@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack serve --progress --mode development",
-    "build": "yarn clean && webpack --progress --mode production && clean:modules",
+    "build": "yarn clean && webpack --progress --mode production && yarn clean:modules",
     "type": "tsc --project tsconfig.json --noEmit",
     "format": "prettier --write \"src/\"",
     "lint": "eslint ./src --ext .ts,.tsx,.js,.jsx --quiet --color",

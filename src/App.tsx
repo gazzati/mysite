@@ -19,7 +19,7 @@ const App = () => {
   }, [])
 
   return (
-    <Dictionary locales={["en", "ru", /* "os" */ ]} localStorageKey="locale">
+    <Dictionary locales={["en", "ru", "os"]} localStorageKey="locale">
       <Header />
       <SideSocial />
       <SideEmail />

@@ -27,7 +27,10 @@ const config = {
     }
   ],
 
-  menuRoutes: [{ url: "/#about", name: l.links.about }]
+  menuRoutes: [
+    { url: "/#about", name: l.links.about },
+    { url: "/#projects", name: l.links.projects }
+  ]
 }
 
 export default config

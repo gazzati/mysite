@@ -9,6 +9,11 @@ export default {
       [Locale.Ru]: "Обо мне",
       [Locale.Os]: "Обо мне"
     },
+    projects: {
+      [Locale.En]: "Projects",
+      [Locale.Ru]: "Проекты",
+      [Locale.Os]: "Проекты"
+    },
     resume: {
       [Locale.En]: "Resume",
       [Locale.Ru]: "Резюме",
@@ -91,19 +96,19 @@ export default {
     },
     talker: {
       [Locale.En]:
-        "Voice anonymous chat. The system randomly connects users to a call. Supported on mobile and desktop browsers.",
+        "Voice anonymous chat. The system randomly connects users to a call. Supported on mobile and desktop browsers. \n\nIn the future, algorithms for selecting by city, age and gender will be added.",
       [Locale.Ru]:
-        "Голосовой анонимный чат. Система случайным образом соединяет пользователей в звонок. Поддерживается на мобильных и десктопных браузерах.",
+        "Голосовой анонимный чат. Система случайным образом соединяет пользователей в звонок. Поддерживается на мобильных и десктопных браузерах. \n\nВ будущем планируется добавление алгоритмов подбора по городу, возрасту и полу.",
       [Locale.Os]:
-        "Голосовой анонимный чат. Система случайным образом соединяет пользователей в звонок. Поддерживается на мобильных и десктопных браузерах."
+        "Голосовой анонимный чат. Система случайным образом соединяет пользователей в звонок. Поддерживается на мобильных и десктопных браузерах.\n\nВ будущем планируется добавление алгоритмов подбора по городу, возрасту и полу."
     },
     dzera: {
       [Locale.En]:
-        "Smart AI assistant. Telegram is used as an interface for interaction. Powered by OpenAI gpt3.5-turbo kernel",
+        "Smart AI assistant. Telegram is used as an interface for interaction. \nPowered by OpenAI gpt3.5-turbo kernel. \n\nAdded function for saving dialog context.",
       [Locale.Ru]:
-        "Умный AI ассистент. В качестве интерфейса для взаимодействия используется Telegram. Работает на основе ядра OpenAI gpt3.5-turbo.",
+        "Умный AI ассистент. В качестве интерфейса для взаимодействия используется Telegram. \nРаботает на основе ядра OpenAI gpt3.5-turbo. \n\nДобавлена функция сохранения контекста диалога.",
       [Locale.Os]:
-        "Умный AI ассистент. В качестве интерфейса для взаимодействия используется Telegram. Работает на основе ядра OpenAI gpt3.5-turbo."
+        "Умный AI ассистент. В качестве интерфейса для взаимодействия используется Telegram. \nРаботает на основе ядра OpenAI gpt3.5-turbo. \n\nДобавлена функция сохранения контекста диалога."
     }
   },
   contacts: {

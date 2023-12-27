@@ -1,8 +1,9 @@
+import photo from "@assets/images/photo.jpg"
 import React, { useRef } from "react"
 
-import photo from "@root/assets/images/photo.jpg"
 import d, { useDictionary } from "@root/dictionary"
-import { loadSection } from "@root/helpers/dom"
+
+import { loadSection } from "@helpers/dom"
 
 import style from "./style.m.scss"
 
@@ -14,23 +15,21 @@ const About = () => {
 
   return (
     <section ref={ref} id="about">
-      <h3 className="styled">{d.home.about.heading[locale]}</h3>
+      <h3 className="styled">{d.about.heading[locale]}</h3>
       <div className={style.about}>
         <div className={style.aboutText}>
-          <p>{d.home.about.start[locale]}</p>
+          <p>{d.about.start[locale]}</p>
           <p>
-            {d.home.about.hobby[locale]}
-            <a href="https://rfmli.ru/" target="_blank">
-              {d.home.about.school[locale]}
-            </a>
+            {d.about.hobby[locale]}
           </p>
           <p>
-            {d.home.about.bio[locale]}
-            <span className={style.fake}>{d.home.about.fakeBio[locale]}</span>
+            {d.about.bio[locale]}
             {" "}
-            {d.home.about.bioContinue[locale]}
+            <span className={style.fake}>{d.about.fakeBio[locale]}</span>
+            {" "}
+            {d.about.bioContinue[locale]}
           </p>
-          <p>{d.home.about.end[locale]}</p>
+          <p>{d.about.end[locale]}</p>
         </div>
 
         <div className={style.portrait}>

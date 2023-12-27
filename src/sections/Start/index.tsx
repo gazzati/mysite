@@ -2,7 +2,8 @@ import classNames from "classnames"
 import React from "react"
 
 import d, { useDictionary } from "@root/dictionary"
-import { Animation, Fade } from "@root/helpers/animations"
+
+import { Animation, Fade } from "@helpers/animations"
 
 import style from "./style.m.scss"
 
@@ -14,16 +15,16 @@ const Start = () => {
   return (
     <section className="visible">
       <div className={style.miniHeading} style={animation.getDuration()}>
-        {d.home.start.welcome[locale]}
+        {d.start.welcome[locale]}
       </div>
       <div className={classNames(style.bigHeading, style.lightestHeading)} style={animation.getDuration()}>
-        {d.home.start.name[locale]}
+        {d.start.name[locale]}
       </div>
       <div className={style.bigHeading} style={animation.getDuration()}>
-        {d.home.start.title[locale]}
+        {d.start.title[locale]}
       </div>
       <p className={style.description} style={animation.getDuration()}>
-        {d.home.start.description[locale]}
+        {d.start.description[locale]}
       </p>
     </section>
   )

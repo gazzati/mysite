@@ -2,7 +2,8 @@ import Icons from "@components/Icons"
 import React from "react"
 
 import config from "@root/config"
-import { Animation, Fade } from "@root/helpers/animations"
+
+import { Animation, Fade } from "@helpers/animations"
 
 import style from "./style.m.scss"
 

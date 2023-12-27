@@ -1,10 +1,9 @@
 import React, { useEffect } from "react"
-import { Link } from "react-router-dom"
-import { HashLink } from "react-router-hash-link"
 
 import config from "@root/config"
 import d, { useDictionary, getLocaleTitle } from "@root/dictionary"
-import { Animation, Fade } from "@root/helpers/animations"
+
+import { Animation, Fade } from "@helpers/animations"
 
 import style from "./style.m.scss"
 
@@ -38,17 +37,17 @@ const Header = () => {
 
   return (
     <header className={style.header}>
-      <Link to="/" className={style.logo} style={animation.getDuration()}>
+      <a href="/" className={style.logo} style={animation.getDuration()}>
         <span className={style.logoText}>gazzati</span>
-      </Link>
+      </a>
 
       <nav className={style.nav}>
         <ul className={style.list}>
           {config.menuRoutes.map(item => (
             <li key={item.url} style={animation.getDuration()}>
-              <HashLink className={style.link} to={item.url}>
+              <a className={style.link} href={item.url}>
                 {item.name[locale]}
-              </HashLink>
+              </a>
             </li>
           ))}
         </ul>

@@ -3,9 +3,6 @@ import Footer from "@components/Footer"
 import Header from "@components/Header"
 import SideEmail from "@components/SideEmail"
 import SideSocial from "@components/SideSocial"
-
-//import Spotify from "@components/Spotify"
-
 import About from "@sections/About"
 import Contacts from "@sections/Contacts"
 import Projects from "@sections/Projects"

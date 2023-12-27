@@ -2,8 +2,8 @@ import Icons from "@components/Icons"
 import classNames from "classnames"
 import React, { useState } from "react"
 
-import { Animation, Fade } from "@root/helpers/animations"
-import { useOutsideClick } from "@root/helpers/dom"
+import { Animation, Fade } from "@helpers/animations"
+import { useOutsideClick } from "@helpers/dom"
 
 import { Icon } from "@interfaces/icons"
 

@@ -19,12 +19,12 @@
   transition: transform 0.4s;
 
   @media (max-width: $mobile) {
-    padding: 0 16px;
+    padding: 0 32px;
   }
 }
 
 .logo {
-  width: 82px;
+  min-width: 82px;
   height: 40px;
   border: 1px $primary solid;
   cursor: pointer;
@@ -78,7 +78,7 @@
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .list {

@@ -3,5 +3,6 @@ export enum Icon {
   GitHub = "github",
   Instagram = "instagram",
   LinkedIn = "linkedin",
-  Spotify = "spotify"
+  Spotify = "spotify",
+  Link = "link"
 }

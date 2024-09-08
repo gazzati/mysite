@@ -19,14 +19,9 @@ const About = () => {
       <div className={style.about}>
         <div className={style.aboutText}>
           <p>{d.about.start[locale]}</p>
+          <p>{d.about.hobby[locale]}</p>
           <p>
-            {d.about.hobby[locale]}
-          </p>
-          <p>
-            {d.about.bio[locale]}
-            {" "}
-            <span className={style.fake}>{d.about.fakeBio[locale]}</span>
-            {" "}
+            {d.about.bio[locale]} <span className={style.fake}>{d.about.fakeBio[locale]}</span>{" "}
             {d.about.bioContinue[locale]}
           </p>
           <p>{d.about.end[locale]}</p>

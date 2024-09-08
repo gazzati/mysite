@@ -7,12 +7,12 @@ export default {
     about: {
       [Locale.En]: "About",
       [Locale.Ru]: "Обо мне",
-      [Locale.Os]: "Обо мне"
+      [Locale.Os]: "Мӕн тыххӕй"
     },
     projects: {
       [Locale.En]: "Projects",
       [Locale.Ru]: "Проекты",
-      [Locale.Os]: "Проекты"
+      [Locale.Os]: "Проекттӕ"
     },
     resume: {
       [Locale.En]: "Resume",
@@ -24,7 +24,7 @@ export default {
     welcome: {
       [Locale.En]: "Hi, my name is",
       [Locale.Ru]: "Привет, меня зовут",
-      [Locale.Os]: "Байрай, мæ ном хуыйны"
+      [Locale.Os]: "Байрай, æз дæн"
     },
     name: {
       [Locale.En]: "Gazzaev Timur.",
@@ -34,32 +34,32 @@ export default {
     title: {
       [Locale.En]: "I'm a software engineer.",
       [Locale.Ru]: "Я инженер-разработчик.",
-      [Locale.Os]: "Инженер-разработчик."
+      [Locale.Os]: "Инженер-аразӕг."
     },
     description: {
       [Locale.En]:
         "Specialized in web application development. \nCurrently, I'm focused on backend and VoIP development.",
       [Locale.Ru]: "Cпециализируюсь на web разработке. \nСейчас я сосредоточен на backend и VoIP разработке.",
-      [Locale.Os]: "Кусын web разработчикæй. \nНыр æз аразын backend ӕмӕ VoIP программатӕ."
+      [Locale.Os]: "Программистӕй кусын. \nНыр æз аразын backend ӕмӕ VoIP программатӕ."
     }
   },
   about: {
     heading: {
       [Locale.En]: "About Me",
       [Locale.Ru]: "Обо мне",
-      [Locale.Os]: "Обо мне"
+      [Locale.Os]: "Мӕн тыххӕй"
     },
     start: {
       [Locale.En]: `I am ${age}. I was born in the Republic of North Ossetia-Alania.`,
       [Locale.Ru]: `Мне ${age}. Я родился в Республике Северная Осетия-Алания.`,
-      [Locale.Os]: `Мне ${age}. Я родился в Республике Северная Осетия-Алания.`
+      [Locale.Os]: `Мӕныл цӕуы ${age} азы. Ӕз райгуырдтӕн Ирыстоны.`
     },
     hobby: {
       [Locale.En]:
-        "From an early age I was interested in electronics. Helped me develop in this area my school - RFMLI",
+        "From an early age I was interested in electronics. Helped me develop in this area my school - RFMLI.",
       [Locale.Ru]:
-        "С малых лет я интересовался электроникой. Развиваться в этой области мне помогала моя школа - РФМЛИ",
-      [Locale.Os]: "С малых лет я интересовался электроникой. Развиваться в этой области мне помогала моя школа - РФМЛИ"
+        "С малых лет я интересовался электроникой. Развиваться в этой области мне помогала моя школа - РФМЛИ.",
+      [Locale.Os]: "Гыццылӕй мӕ зӕрдӕмӕ электроника цыди. Ацы къабазы рӕзынӕн мын ӕххуыс кодта ме скъола - РФМЛИ."
     },
     bio: {
       [Locale.En]:
@@ -67,17 +67,18 @@ export default {
       [Locale.Ru]:
         "В 11 лет я спаял свою первую печатную плату. А в 16 впервые занялся программированием контроллеров Arduino.",
       [Locale.Os]:
-        "В 11 лет я спаял свою первую печатную плату. А в 16 впервые занялся программированием контроллеров Arduino."
+        "11 азы мыл куы цыд, уӕд ӕз мӕ фыццаг плата æхсидтӕн. 16 та фыццаг хатт бавнӕлдтон Arduino контролерты программӕмӕ."
     },
     fakeBio: {
       [Locale.En]: "A year later, I assembled my first engine, and at 20 I introduced the Iron Man suit to the world.",
       [Locale.Ru]: "Через год я собрал свой первый двигатель, а в 20 представил миру костюм железного человека.",
-      [Locale.Os]: "Через год я собрал свой первый двигатель, а в 20 представил миру костюм железного человека."
+      [Locale.Os]:
+        "Афӕдзы фӕстӕ ӕрӕмбырд кодтон мӕ фыццаг змӕлӕг, 20 та дунейӕн мӕ цӕстытыл ауайын кодтон Æфсӕйнаг Aдӕймаджы костюм."
     },
     bioContinue: {
       [Locale.En]: "A year later, I entered the RTU MIREA and diligently engaged in web development",
       [Locale.Ru]: "Через год я поступил в РТУ МИРЭА и усердно занялся web разработкой.",
-      [Locale.Os]: "Через год я поступил в РТУ МИРЭА и усердно занялся web разработкой."
+      [Locale.Os]: "Афӕдзы фӕстӕ РТУ МИРЭАмæ бацыдтӕн ӕмӕ зӕрдиагӕй бавнӕлдтон web разработкамӕ."
     },
     end: {
       [Locale.En]:
@@ -85,14 +86,14 @@ export default {
       [Locale.Ru]:
         "С тех пор я занимался от верстки лендингов до проектирования микросервисной архитектуры. Одно знаю точно: мне это нравится.",
       [Locale.Os]:
-        "С тех пор я занимался от верстки лендингов до проектирования микросервисной архитектуры. Одно знаю точно: мне это нравится."
+        "Уӕдӕй фӕстӕмӕ куыстон ленингты версткӕйӕ микросервисон архитектурӕйы проекты онг. Иу хъуыддаг зонын бӕлвырдӕй: мӕ зӕрдӕмӕ цӕуы."
     }
   },
   projects: {
     heading: {
       [Locale.En]: "My projects",
       [Locale.Ru]: "Мои проекты",
-      [Locale.Os]: "Мои проекты"
+      [Locale.Os]: "Мои проекттӕ"
     },
     talker: {
       [Locale.En]:
@@ -104,11 +105,11 @@ export default {
     },
     dzera: {
       [Locale.En]:
-        "Smart AI assistant. Telegram is used as an interface for interaction. \nPowered by OpenAI gpt3.5-turbo kernel. \n\nAdded function for saving dialog context.",
+        "Smart AI assistant. Telegram is used as an interface for interaction. \nPowered by OpenAI gpt4.0 kernel. \n\nAdded function for saving dialog context.",
       [Locale.Ru]:
-        "Умный AI ассистент. В качестве интерфейса для взаимодействия используется Telegram. \nРаботает на основе ядра OpenAI gpt3.5-turbo. \n\nДобавлена функция сохранения контекста диалога.",
+        "Умный AI ассистент. В качестве интерфейса для взаимодействия используется Telegram. \nРаботает на основе ядра OpenAI gpt4.0. \n\nДобавлена функция сохранения контекста диалога.",
       [Locale.Os]:
-        "Умный AI ассистент. В качестве интерфейса для взаимодействия используется Telegram. \nРаботает на основе ядра OpenAI gpt3.5-turbo. \n\nДобавлена функция сохранения контекста диалога."
+        "Умный AI ассистент. В качестве интерфейса для взаимодействия используется Telegram. \nРаботает на основе ядра OpenAI gpt4.0. \n\nДобавлена функция сохранения контекста диалога."
     }
   },
   contacts: {

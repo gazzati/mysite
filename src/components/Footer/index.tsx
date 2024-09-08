@@ -20,7 +20,6 @@ const Footer = () => {
   return (
     <div className={style.footer}>
       <div>Visits: {stats.visits}</div>
-      <div className={style.rights}>© 2023 Gazzaev Timur</div>
     </div>
   )
 }

@@ -22,7 +22,7 @@ const Projects = () => {
         {data.map(project => (
           <div className={style.project}>
             <a className={style.image} href={project.url} target="_blank" rel="noreferrer">
-              <img src={project.photo} alt={project.name} role="presentation"/>
+              <img src={project.photo} alt={project.name} role="presentation" />
             </a>
             <div className={style.content}>
               <h4>
@@ -31,19 +31,21 @@ const Projects = () => {
                 </a>
               </h4>
               <div className={style.description}>{project.description[locale]}</div>
-             <div className={style.bottomBlock}>
-              <ul className={style.technologies}>{project.technologies.map(item => (
-                <li className={style.technology}>{item}</li>
-              ))}</ul>
-             <div className={style.links}>
-              <a href={project.repoUrl} target="_blank" rel="noreferrer">
-                  <Icons name="github" />
-                </a>
-                <a href={project.url} target="_blank" rel="noreferrer">
-                <Icons name="link" />
-                </a>
+              <div className={style.bottomBlock}>
+                <ul className={style.technologies}>
+                  {project.technologies.map(item => (
+                    <li className={style.technology}>{item}</li>
+                  ))}
+                </ul>
+                <div className={style.links}>
+                  <a href={project.repoUrl} target="_blank" rel="noreferrer">
+                    <Icons name="github" />
+                  </a>
+                  <a href={project.url} target="_blank" rel="noreferrer">
+                    <Icons name="link" />
+                  </a>
+                </div>
               </div>
-             </div>
             </div>
           </div>
         ))}

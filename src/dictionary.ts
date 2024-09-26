@@ -110,6 +110,14 @@ export default {
         "Умный AI ассистент. В качестве интерфейса для взаимодействия используется Telegram. \nРаботает на основе ядра OpenAI gpt4.0. \n\nДобавлена функция сохранения контекста диалога.",
       [Locale.Os]:
         "Умный AI ассистент. В качестве интерфейса для взаимодействия используется Telegram. \nРаботает на основе ядра OpenAI gpt4.0. \n\nДобавлена функция сохранения контекста диалога."
+    },
+    fidar: {
+      [Locale.En]:
+        "High-speed anonymous VPN with unlimited traffic, built on Wireguard technology. \nIt is possible to select the country of the VPN server.",
+      [Locale.Ru]:
+        "Высокоскоростной анонимный VPN с безлимтным трафиком, построенный на основе технологии Wireguard. \nЕсть возможность выбора страны VPN сервера.",
+      [Locale.Os]:
+        "Высокоскоростной анонимный VPN с безлимтным трафиком, построенный на основе технологии Wireguard. \nЕсть возможность выбора страны VPN сервера."
     }
   },
   contacts: {

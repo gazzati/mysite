@@ -1,0 +1,52 @@
+{
+  "links": {
+    "about": "About",
+    "projects": "Projects",
+    "resume": "Resume"
+  },
+  "start": {
+    "welcome": "Hi, my name is",
+    "name": "Gazzaev Timur.",
+    "title": "I'm a software engineer.",
+    "description": "Specialized in web application development. \nCurrently, I'm focused on backend and VoIP development."
+  },
+  "about": {
+    "heading": "About Me",
+    "start": "I am {age}. I was born in the Republic of North Ossetia-Alania.",
+    "hobby": "From an early age I was interested in electronics. Helped me develop in this area my school - RFMLI.",
+    "bio": "At the age of 11 I soldered my first PCB. And at 16, I first started programming Arduino controllers.",
+    "fakeBio": "A year later, I assembled my first engine, and at 20 I introduced the Iron Man suit to the world.",
+    "bioContinue": "A year later, I entered the RTU MIREA and diligently engaged in web development",
+    "end": "Since then, I have been involved in everything from landing page layout to microservice architecture design. One thing I know for sure: I love it."
+  },
+  "projects": {
+    "heading": "My projects",
+    "fidar": "High-speed anonymous VPN with unlimited traffic, built on Wireguard technology. \nIt is possible to select the country of the VPN server.",
+    "dzera": "Smart AI assistant. Telegram is used as an interface for interaction. \nPowered by OpenAI gpt4.0 kernel. \n\nAdded function for saving dialog context.",
+    "talker": "Voice anonymous chat. The system randomly connects users to a call. Supported on mobile and desktop browsers. \n\nIn the future, algorithms for selecting by city, age and gender will be added."
+  },
+  "contacts": {
+    "heading": "Contact me. \nI am always online."
+  },
+  "meta": {
+    "home": {
+      "title": "Timur Gazzaev — Software Engineer",
+      "description": "Timur Gazzaev is a software engineer specialized in web application development."
+    },
+    "about": {
+      "title": "About — Timur Gazzaev",
+      "description": "Learn more about Timur Gazzaev, a software engineer from North Ossetia-Alania."
+    },
+    "projects": {
+      "title": "Projects — Timur Gazzaev",
+      "description": "Explore projects by Timur Gazzaev: Fídar VPN, Dzera Bot, Talker and more."
+    },
+    "contacts": {
+      "title": "Contacts — Timur Gazzaev",
+      "description": "Get in touch with Timur Gazzaev. Available via Telegram, GitHub, email."
+    }
+  },
+  "locale": {
+    "title": "English"
+  }
+}

@@ -1,5 +1,3 @@
-import React from "react"
-
 export const LinkedIn = () => (
   <svg
     role="img"

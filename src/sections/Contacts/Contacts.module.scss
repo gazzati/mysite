@@ -1,0 +1,46 @@
+.contacts {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: $mobile) {
+    display: flex;
+  }
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 16px;
+}
+
+.link {
+  padding: 8px;
+  display: inline-block;
+  position: relative;
+  transition: $transition;
+  color: $secondary-light;
+
+  &:hover {
+    color: $primary;
+  }
+
+  svg {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.email {
+  margin: 8px auto;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: $transition;
+
+  &:hover {
+    color: $primary;
+  }
+}

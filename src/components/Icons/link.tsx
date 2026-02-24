@@ -1,5 +1,3 @@
-import React from "react"
-
 export const Link = () => (
   <svg
     role="img"

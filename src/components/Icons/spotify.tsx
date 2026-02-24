@@ -1,5 +1,3 @@
-import React from "react"
-
 export const Spotify = () => (
   <svg role="img" viewBox="0 0 16 16" fill="none" stroke="currentColor">
     <title>Spotify</title>

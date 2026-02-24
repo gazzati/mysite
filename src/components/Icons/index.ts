@@ -5,4 +5,4 @@ export { LinkedIn } from "./linkedin"
 export { Spotify } from "./spotify"
 export { Link } from "./link"
 
-export { Icons as default } from "./icon"
+export { default as Icons } from "./Icons"

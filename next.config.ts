@@ -8,6 +8,16 @@ const nextConfig: NextConfig = {
   sassOptions: {
     additionalData: `@use "@/styles/variables" as *;`,
   },
+  serverExternalPackages: ["typeorm", "pg", "maxmind", "reflect-metadata"],
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      // Suppress TypeORM warnings for optional drivers not used in this project
+      config.ignoreWarnings = [
+        { module: /typeorm/ },
+      ]
+    }
+    return config
+  },
 }
 
 export default withNextIntl(nextConfig)

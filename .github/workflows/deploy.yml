@@ -43,5 +43,5 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd /home/tim/mysite
-            docker compose pull
-            docker compose up -d
+            IMAGE_TAG=${{ github.sha }} docker compose pull
+            IMAGE_TAG=${{ github.sha }} docker compose up -d

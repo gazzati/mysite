@@ -25,3 +25,6 @@ out/
 
 # Optional eslint cache
 .eslintcache
+
+# TypeScript build info
+tsconfig.tsbuildinfo

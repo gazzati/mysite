@@ -24,7 +24,16 @@ export async function getDataSource(): Promise<DataSource> {
   }
 
   dataSource = createDataSource()
-  await dataSource.initialize()
+
+  try {
+    await dataSource.initialize()
+  } catch (error) {
+    console.error(`[DB] Failed to connect to PostgreSQL:`, error)
+    throw error
+  }
+
+  const { host, port, database } = dataSource.options as { host: string; port: number; database: string }
+  console.log(`[DB] Connected to PostgreSQL: ${host}:${port}/${database}`)
 
   return dataSource
 }

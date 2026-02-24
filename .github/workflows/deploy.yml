@@ -31,9 +31,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: |
-            gazzati/mysite:latest
-            gazzati/mysite:${{ steps.version.outputs.value }}
+          tags: gazzati/mysite:${{ steps.version.outputs.value }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 

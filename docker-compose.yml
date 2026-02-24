@@ -1,6 +1,6 @@
 services:
   mysite:
-    image: gazzati/mysite:${IMAGE_TAG:-latest}
+    image: gazzati/mysite:latest
     ports:
       - "3000:3000"
     restart: unless-stopped

@@ -49,6 +49,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd /home/tim/mysite
-            sed -i "s/^IMAGE_TAG=.*/IMAGE_TAG=${{ needs.build-and-push.outputs.version }}/" .env
+            sed -i "s|gazzati/mysite:.*|gazzati/mysite:${{ needs.build-and-push.outputs.version }}|" docker-compose.yml
             docker compose pull
             docker compose up -d

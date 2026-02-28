@@ -29,3 +29,5 @@ out/
 
 # TypeScript build info
 tsconfig.tsbuildinfo
+
+data.mmdb

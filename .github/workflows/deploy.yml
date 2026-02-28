@@ -4,18 +4,17 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     outputs:
-      version: ${{ steps.version.outputs.value }}
+      image_tag: ${{ steps.meta.outputs.image_tag }}
     steps:
       - uses: actions/checkout@v4
-
-      - name: Get version
-        id: version
-        run: echo "value=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -26,12 +25,19 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Prepare image metadata
+        id: meta
+        run: |
+          IMAGE_TAG="sha-${GITHUB_SHA::12}"
+          echo "image_tag=$IMAGE_TAG" >> "$GITHUB_OUTPUT"
+          echo "tags=gazzati/mysite:$IMAGE_TAG,gazzati/mysite:latest" >> "$GITHUB_OUTPUT"
+
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
           context: .
           push: true
-          tags: gazzati/mysite:${{ steps.version.outputs.value }}
+          tags: ${{ steps.meta.outputs.tags }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -47,6 +53,14 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd /home/tim/mysite
-            sed -i "s|gazzati/mysite:.*|gazzati/mysite:${{ needs.build-and-push.outputs.version }}|" docker-compose.yml
-            docker compose pull
-            docker compose up -d
+            if [ ! -f .env ]; then
+              echo "Missing required file: .env"
+              exit 1
+            fi
+            if [ ! -f data.mmdb ]; then
+              echo "Missing required file: data.mmdb"
+              exit 1
+            fi
+            echo "IMAGE_TAG=${{ needs.build-and-push.outputs.image_tag }}" > .env.deploy
+            docker compose --env-file .env --env-file .env.deploy pull mysite
+            docker compose --env-file .env --env-file .env.deploy up -d --no-deps mysite

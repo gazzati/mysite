@@ -21,6 +21,7 @@ out/
 
 # dotenv environment variables file
 .env
+.env.deploy
 .env*.local
 
 # Optional eslint cache

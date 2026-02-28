@@ -1,6 +1,6 @@
 services:
   mysite:
-    image: gazzati/mysite:latest
+    image: gazzati/mysite:${IMAGE_TAG:-latest}
     ports:
       - "3000:3000"
     restart: unless-stopped
@@ -8,4 +8,4 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
-      - ./data.mmdb:/app/data.mmdb:ro
+      - ${MMDB_PATH:-./data.mmdb}:/app/data.mmdb:ro

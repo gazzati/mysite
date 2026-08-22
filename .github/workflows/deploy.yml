@@ -28,16 +28,17 @@ jobs:
       - name: Prepare image metadata
         id: meta
         run: |
-          IMAGE_TAG="sha-${GITHUB_SHA::12}"
-          echo "image_tag=$IMAGE_TAG" >> "$GITHUB_OUTPUT"
-          echo "tags=gazzati/mysite:$IMAGE_TAG,gazzati/mysite:latest" >> "$GITHUB_OUTPUT"
+          SHA="${{ github.event.workflow_run.head_sha || github.sha }}"
+          echo "image_tag=sha-${SHA::12}" >> "$GITHUB_OUTPUT"
 
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
           context: .
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: |
+            gazzati/mysite:${{ steps.meta.outputs.image_tag }}
+            gazzati/mysite:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -51,16 +52,44 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script_stop: true
           script: |
+            set -e
             cd /home/tim/mysite
-            if [ ! -f .env ]; then
-              echo "Missing required file: .env"
+
+            if [ ! -f .env ]; then echo "::error::Missing required file: .env"; exit 1; fi
+            if [ ! -f data.mmdb ]; then echo "::error::Missing required file: data.mmdb"; exit 1; fi
+
+            NEW_TAG="${{ needs.build-and-push.outputs.image_tag }}"
+            PREV_TAG="$(grep -s '^IMAGE_TAG=' .env.deploy | cut -d= -f2 || true)"
+            echo "Deploying $NEW_TAG (previous: ${PREV_TAG:-none})"
+
+            echo "IMAGE_TAG=$NEW_TAG" > .env.deploy
+
+            docker compose --env-file .env.deploy pull mysite
+            docker compose --env-file .env.deploy up -d --no-deps mysite
+
+            echo "Waiting for health check on port 3000..."
+            OK=0
+            for i in $(seq 1 30); do
+              CODE="$(curl -sL -o /dev/null -w '%{http_code}' --max-time 10 http://127.0.0.1:3000/ || true)"
+              if [ -n "$CODE" ] && [ "$CODE" -ge 200 ] && [ "$CODE" -lt 400 ]; then OK=1; echo "Healthy after ${i}s (HTTP $CODE)"; break; fi
+              sleep 1
+            done
+
+            if [ "$OK" != "1" ]; then
+              echo "::error::Health check FAILED for mysite on port 3000"
+              docker compose logs --tail=50 mysite || true
+              if [ -n "$PREV_TAG" ]; then
+                echo "Rolling back to $PREV_TAG"
+                echo "IMAGE_TAG=$PREV_TAG" > .env.deploy
+                docker compose --env-file .env.deploy up -d --no-deps mysite
+                echo "Rolled back to $PREV_TAG"
+              else
+                echo "::warning::No previous tag recorded — cannot roll back"
+              fi
               exit 1
             fi
-            if [ ! -f data.mmdb ]; then
-              echo "Missing required file: data.mmdb"
-              exit 1
-            fi
-            echo "IMAGE_TAG=${{ needs.build-and-push.outputs.image_tag }}" > .env.deploy
-            docker compose --env-file .env --env-file .env.deploy pull mysite
-            docker compose --env-file .env --env-file .env.deploy up -d --no-deps mysite
+
+            docker image prune -f || true
+            echo "Deploy of $NEW_TAG succeeded"
